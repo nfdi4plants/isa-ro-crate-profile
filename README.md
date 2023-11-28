@@ -57,7 +57,7 @@
 | Property | Required | Description |
 |----------|----------|-------------|
 |@type |MUST|Dataset|
-|@id|Should be a subdirectory corresponding to this assay.|
+|@id|MUST|Should be a subdirectory corresponding to this assay.|
 |additionalType|MUST|‘Assay’ or ontology term to identify it as an Assay|
 |creator|MUST|Person - The performer of the experiments.|
 |identifier|MUST|Text or URL - Identifying descriptor of the assay.|
