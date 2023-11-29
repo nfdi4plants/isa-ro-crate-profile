@@ -1,7 +1,7 @@
 # ISA RO-Crate Profile
 
 * Version: 0.1
-* Permalink: <tbd>
+* Permalink: _coming soon_
 * Authors
   * Florian
   * Lukas  
@@ -12,7 +12,9 @@
 
 ## Overview
 
-## Attributes
+## Requirements
+
+New properties that aren't currently part of the related type are shown in _italic_.
 
 ### Investigation
 
@@ -44,7 +46,7 @@
 |identifier|MUST|Text or URL - Identifying descriptor of the study.|
 |headline|MUST|Text - A title of the study.|
 |hasPart|SHOULD|Dataset (Assays) and/or File - Assays contained in this study or actual data files resulting from the process sequence.|
-|processSequence|SHOULD|LabProcess - The experimental processes performed in this study.|
+|_processSequence_|SHOULD|LabProcess - The experimental processes performed in this study.|
 |description|SHOULD|Text - A short description of the study (e.g. an abstract).|
 |dateCreated|SHOULD|DateTime|
 |dateModified|SHOULD|DateTime|
@@ -62,7 +64,7 @@
 |creator|MUST|Person - The performer of the experiments.|
 |identifier|MUST|Text or URL - Identifying descriptor of the assay.|
 |headline|MUST|Text - A title of the assay.|
-|processSequence|MUST|LabProcess - The experimental processes performed in this assay.|
+|_processSequence_|MUST|LabProcess - The experimental processes performed in this assay.|
 |measurementMethod|MUST|Describes the type measurement e.g Complexomics or transcriptomics as an ontology term - URL or DefinedType|
 |measurementTechnique|MUST|Describes the type of technology used to take the measurement, e.g mass spectrometry or deep sequencing - URL or DefinedType|
 |hasPart|SHOULD|The data files resulting from the process sequence - File.|
@@ -73,7 +75,8 @@
 |citation|COULD|ScholarlyArticle - A publication corresponding to this assay.|
 |comment|COULD|Comment|
 
-### LabProcess
+
+### LabProcess (_new type_)
 
 | Property | Required | Description |
 |----------|----------|-------------|
