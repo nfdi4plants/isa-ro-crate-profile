@@ -3,12 +3,12 @@
 * Version: 0.1
 * Permalink: _coming soon_
 * Authors
-  * Florian
-  * Lukas  
-  * Timo
-  * Stuart
-  * Sebastian  
-    
+  * Florian Wetzels - https://orcid.org/0000-0002-5526-7138
+  * Lukas Weil - https://orcid.org/0000-0003-1945-6342
+  * Sebastian Beier - https://orcid.org/0000-0002-2177-8781
+  * Stuart Owen - https://orcid.org/0000-0003-2130-0865
+  * Timo Muehlhaus - https://orcid.org/0000-0003-3925-6778
+
 
 ## Overview
 
