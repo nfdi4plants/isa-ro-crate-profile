@@ -1,13 +1,3 @@
-<style>
-  table {
-      display:table;
-      width:100%;
-  }
-  table th:nth-of-type(1) {
-      width:20em;
-  }
-</style>
-
 # ISA RO-Crate Profile
 
 * Version: 0.1
