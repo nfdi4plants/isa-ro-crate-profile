@@ -150,7 +150,41 @@ New properties that aren't currently part of the related type are shown in _ital
 |software|COULD|SoftwareApplication|Software or tool used as part of the lab protocol to complete a part of it.|
 |sameAs|COULD|URL|URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.|
 
-_TODO add Sample, Data and PropertyValue_
+### Sample
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@type |MUST|Sample||
+|@id|MUST|Text or URL|Could be the unique sample name.|
+|name|MUST|Text|A name identifying the sample.|
+|additionalProperty|SHOULD|PropertValue|characteristics or factors|
+|_derivesFrom_|COULD|Sample|A source from which the sample is derived through processes.|
+
+### Data
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@type |MUST|File||
+|@id|MUST|File|Should be the path pointing to the file./
+|name|MUST|Text or URL|The name of the file.|
+|comment|COULD|Comment|Comment|
+|encodingFormat|COULD|Text of URL|Media format as a MIME type|
+|disambiguatingDescription|COULD|Text|The type of the data file (“Raw Data File", “Derived Data File" or "Image File").|
+
+### PropertyValue
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@type |MUST|PropertyValue||
+|@id|MUST|Text or URL||
+|name|MUST|Text|Key name|
+|value|MUST|Text|Value text or number|
+|propertyID|SHOULD|URL|Key ontology reference|
+|unitCode|COULD|URL|Unit ontology reference|
+|unitText|COULD|Text|Unit name|
+|valueReference|COULD|URL|Value ontology reference|
+|additionalType|COULD|Text|Can be used to describe if the value is a factor, characteristic or parameter.|
+
 
 ## Example ro-crate-metadata.json
 
