@@ -18,7 +18,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 ### Investigation
 
-| <div style='width:11em'>Property</div> | Required | <div style='width:9em'>Expected Type</div> | Description |
+| Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@type |MUST|Dataset||
 |@id|MUST|Text or URL|Should be “./”, the investigation object represents the root data entity.|
@@ -37,7 +37,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 ### Study
 
-| <div style='width:11em'>Property</div> | Required | <div style='width:9em'>Expected Type</div> | Description |
+| Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@type |MUST|Dataset||
 |@id|MUST|Text or URL|Should be a subdirectory corresponding to this study.|
@@ -56,7 +56,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 ### Assay
 
-| <div style='width:11em'>Property</div> | Required | <div style='width:9em'>Expected Type</div> | Description |
+| Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@type |MUST|Dataset||
 |@id|MUST|Text or URL|Should be a subdirectory corresponding to this assay.|
@@ -78,7 +78,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 ### LabProcess (_new type_)
 
-| <div style='width:11em'>Property</div> | Required | <div style='width:8em'>Expected Type</div> | Description |
+| Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@type |MUST|LabProcess||
 |@id|MUST|Text or URL|Could identify the process using the isa metadata filename and the protocol reference or process name.|
@@ -93,7 +93,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 ### LabProtocol
 
-| <div style='width:11em'>Property</div> | Required | <div style='width:9em'>Expected Type</div> | Description |
+| Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@type |MUST|LabProtocol||
 |@id|MUST|Text or URL|Could be the url pointing to the protocol resource.|
