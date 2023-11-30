@@ -13,6 +13,7 @@
 ## Overview
 
 _TODO: add some text_
+
 _TODO: check property names on diagram edges_
 
 ```mermaid
@@ -74,7 +75,7 @@ New properties that aren't currently part of the related type are shown in _ital
 |dateModified|SHOULD|DateTime|When the Investigation was last modified|
 |datePublished|COULD|DateTime|When the Investigation was published|
 |citation|COULD|ScholarlyArticle|Publications corresponding with this investigation.|
-|comment|COULD|Text|Comment|
+|comment|COULD|Comment|Comment|
 |mentions|COULD|DefinedTermSet|Ontologies referenced in this investigation.|
 
 ### Study
@@ -94,7 +95,7 @@ New properties that aren't currently part of the related type are shown in _ital
 |dateModified|SHOULD|DateTime|When the Study was last modified|
 |datePublished|COULD|DateTime|When the Study was published|
 |citation|COULD|ScholarlyArticle|A publication corresponding to the study.|
-|comment|COULD|Text|Comment|
+|comment|COULD|Comment|Comment|
 
 ### Assay
 
@@ -115,7 +116,7 @@ New properties that aren't currently part of the related type are shown in _ital
 |dateCreated|SHOULD|DateTime|When the Assay was created|
 |dateModified|SHOULD|DateTime|When the Assay was last modified|
 |citation|COULD|ScholarlyArticle|A publication corresponding to this assay.|
-|comment|COULD|Text|Comment|
+|comment|COULD|Comment|Comment|
 
 
 ### LabProcess (_new type_)
@@ -143,7 +144,7 @@ New properties that aren't currently part of the related type are shown in _ital
 |headline|SHOULD|Text|Main title of the LabProtocol.|
 |purpose|SHOULD|URL or DefinedType|The protocol type as an ontology term|
 |description|SHOULD|Text|A short description of the protocol (e.g. an abstract)|
-|comment|COULD|Text|Comment|
+|comment|COULD|Comment|Comment|
 |version|COULD|Number of Text|An identifier for the version to ensure protocol tracking.|
 |labEquipment|COULD|DefinedTerm or Text or URL|For LabProtocols it would be a laboratory equipment use by a person to follow one or more steps described in this LabProtocol.|
 |reagent|COULD|BioChemEntity or DefinedTerm or Text or URL|Reagents used in the protocol.|
