@@ -12,6 +12,8 @@
 
 ## Overview
 
+_TODO: add some text_
+_TODO: check property names on diagram edges_
 
 ```mermaid
 flowchart TD
@@ -148,4 +150,8 @@ New properties that aren't currently part of the related type are shown in _ital
 |software|COULD|SoftwareApplication|Software or tool used as part of the lab protocol to complete a part of it.|
 |sameAs|COULD|URL|URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.|
 
+_TODO add Sample, Data and PropertyValue_
+
 ## Example ro-crate-metadata.json
+
+_TODO: simple example and a link to a more complete example_
