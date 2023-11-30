@@ -12,6 +12,46 @@
 
 ## Overview
 
+
+```mermaid
+flowchart TD
+
+dataset[<h2>Investigation/Study/Assay=Dataset</h2>]
+
+Process[<h2>LabProcess</h2>]
+
+Protocol[<h2>Protocol</h2>]
+
+BioSample[<h2>Source/Sample/Material=<font color=blue>Sample</font></h2>]
+
+DataFile[<h2>Data=File</h2>]
+
+ont[<h2>OntologyAnnotation=DefinedTerm</h2>]
+
+prop[<h2>ParameterValue=PropertyValue</h2>]
+
+dataset --hasPart--> dataset
+dataset --hasPart----> DataFile
+dataset --processSequence--> Process
+
+Process --"output"---> DataFile
+Process --"output"--> BioSample
+Process --input--> BioSample
+Process --executesProtocol--> Protocol
+Process --parameterValues---> prop
+
+BioSample --derivesFrom--> BioSample
+BioSample --additionalProperty--> prop
+
+Protocol --protocolType---> ont
+Protocol --parameters---> ont
+
+prop --category--> ont
+prop --value--> ont
+prop --unit--> ont
+
+```
+
 ## Requirements
 
 New properties that aren't currently part of the related type are shown in _italic_.
