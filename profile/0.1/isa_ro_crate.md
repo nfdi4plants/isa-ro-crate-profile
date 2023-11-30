@@ -20,7 +20,7 @@ dataset[<h2>Investigation/Study/Assay=Dataset</h2>]
 
 Process[<h2>LabProcess</h2>]
 
-Protocol[<h2>Protocol</h2>]
+Protocol[<h2>Protocol=LabProtocol</h2>]
 
 BioSample[<h2>Source/Sample/Material=<font color=blue>Sample</font></h2>]
 
