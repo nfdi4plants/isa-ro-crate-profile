@@ -63,7 +63,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
-|@type |MUST|Dataset||
+|@type |MUST|Text|must be 'Dataset'|
 |@id|MUST|Text or URL|Should be “./”, the investigation object represents the root data entity.|
 |additionalType|MUST|Text or URL|‘Investigation’ or ontology term to identify it as an Investigation|
 |headline|MUST|Text|A title of the investigation (e.g. a paper title).|
@@ -82,7 +82,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
-|@type |MUST|Dataset||
+|@type |MUST|Text|must be 'Dataset'|
 |@id|MUST|Text or URL|Should be a subdirectory corresponding to this study.|
 |additionalType|MUST|Text or URL|‘Study’ or ontology term to identify it as a Study|
 |creator|MUST|Person|The performer of the study.|
@@ -101,7 +101,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
-|@type |MUST|Dataset||
+|@type |MUST|Text|must be 'Dataset'|
 |@id|MUST|Text or URL|Should be a subdirectory corresponding to this assay.|
 |additionalType|MUST|Text or URL|‘Assay’ or ontology term to identify it as an Assay|
 |creator|MUST|Person|The performer of the experiments.|
@@ -123,7 +123,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
-|@type |MUST|LabProcess||
+|@type |MUST|Text|must be 'LabProcess'|
 |@id|MUST|Text or URL|Could identify the process using the isa metadata filename and the protocol reference or process name.|
 |name|MUST|Text| -|
 |agent|MUST|Person|The performer|
@@ -138,7 +138,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
-|@type |MUST|LabProtocol||
+|@type |MUST|Text|must be 'LabProtocol'|
 |@id|MUST|Text or URL|Could be the url pointing to the protocol resource.|
 |url|MUST|URL|Pointer to protocol resources external to the ISA-Tab that can be accessed by their Uniform Resource Identifier (URI).|
 |headline|SHOULD|Text|Main title of the LabProtocol.|
@@ -155,7 +155,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
-|@type |MUST|Sample||
+|@type |MUST|Text|must be 'Sample'|
 |@id|MUST|Text or URL|Could be the unique sample name.|
 |name|MUST|Text|A name identifying the sample.|
 |additionalProperty|SHOULD|PropertValue|characteristics or factors|
@@ -165,7 +165,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
-|@type |MUST|File||
+|@type |MUST|Text|must be 'File' or 'MediaObject'|
 |@id|MUST|File|Should be the path pointing to the file./
 |name|MUST|Text or URL|The name of the file.|
 |comment|COULD|Comment|Comment|
@@ -176,7 +176,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
-|@type |MUST|PropertyValue||
+|@type |MUST|Text|must be 'PropertyValue'|
 |@id|MUST|Text or URL||
 |name|MUST|Text|Key name|
 |value|MUST|Text|Value text or number|
