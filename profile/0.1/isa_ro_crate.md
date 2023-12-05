@@ -186,6 +186,35 @@ New properties that aren't currently part of the related type are shown in _ital
 |valueReference|COULD|URL|Value ontology reference|
 |additionalType|COULD|Text|Can be used to describe if the value is a factor, characteristic or parameter.|
 
+### Person
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@type |MUST|Text|must be 'Person'|
+|@id|MUST|Text or URL||
+|givenName|MUST|Text||
+|familyName|MUST|Text||
+|email|SHOULD|Text||
+|affiliation|SHOULD|Organization||
+|jobTitle|SHOULD|DefinedTerm||
+|additionalName|COULD|Text||
+|address|COULD|PostalAddress or Text||
+|telephone|COULD|Text||
+|faxNumber|COULD|Text|
+|disambiguatingDescription|COULD|Text|
+
+### ScholarlyArticle
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@type |MUST|Text|must be 'ScholarlyArticle'|
+|@id|MUST|Text or URL||
+|sameAs|MUST|URL|URL of a reference Web page that unambiguously indicates the item's identity.|
+|headline|MUST|Text||
+|author|SHOULD|Person||
+|url|SHOULD|URL||
+|creativeWorkStatus|COULD|DefinedTerm|The status of the publication in terms of its stage in a lifecycle.|
+|disambiguatingDescription|COULD|Text|
 
 ## Example ro-crate-metadata.json
 
