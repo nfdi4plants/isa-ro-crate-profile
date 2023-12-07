@@ -15,19 +15,20 @@
 A significant part of the previous work on this [RO-Crate](https://www.researchobject.org/ro-crate/) profile for [ISA](https://isa-tools.org/index.html) was produced as part of the [Annotated Research Context (ARC)](https://nfdi4plants.org/content/learn-more/annotated-research-context.html) project, through [arc-to-rocrate](https://github.com/nfdi4plants/arc-to-rocrate).
 
 During the [ELIXIR Biohackathon 2023](https://biohackathon-europe.org/), as part of [Project 14: Enabling continuous RDM using Annotated Research Contexts with RO-Crate profiles for ISA](https://github.com/elixir-europe/biohackathon-projects-2023/tree/main/14), 
-the profile was further fine tuned and some remaining unresolved mappings resolved.
+the profile was further fine tuned and defined, and some remaining unresolved mappings resolved.
 
 The aim of the profile is to be able to fully represent [ISA-JSON](https://isa-specs.readthedocs.io/en/latest/isajson.html) as RO-Crate, fully capturing the metadata and files in a non-lossy form such that it
 should be possible to convert between one to the other, in either direction, without loss of information.
 
 The ISA RO-Crate has led to a few pending recommended changes to [Bioschemas](https://bioschemas.org/) types:
 
-**[Dataset](https://bioschemas.org/profiles/Dataset/1.0-RELEASE)** - A new property _processSequence_ to describe how the Dataset was created.
+**Dataset** - A new property _processSequence_ to describe how the Dataset was created.
   
-**[LabProtocol](https://bioschemas.org/profiles/LabProtocol/0.7-DRAFT)** - Redefine it as a child of [HowTo](https://schema.org/HowTo), and make it clearer that it is intended to specifically describe the planned instructions.
+**LabProtocol** - Redefine it as a child of [HowTo](https://schema.org/HowTo), and make it clearer that it is intended to specifically describe the planned instructions for a lab process.
 
-**LabProcess (_new_)** - A suggested type and profile, as a child of [Action](https://schema.org/Action), to specifically describe the details outcomes of an executed LabProtocol. A working group
-is being setup to define this as a new type.
+**LabProcess** - A suggested new type and profile, as a child of [Action](https://schema.org/Action), to specifically describe the details and outcomes of an executed LabProtocol. 
+Thereby seperating the "what was planned" and "what happened" between LabProtocol and LabProcess respectively. 
+A working group is being setup to define this as a new type.
 
 
 ```mermaid
@@ -72,7 +73,7 @@ New properties that aren't currently part of the related type are shown in _ital
 
 ### Investigation
 
-Is based upon Dataset and maps the the [ISA-JSON Investigation](https://isa-specs.readthedocs.io/en/latest/isajson.html#investigation-schema-json)
+Is based upon Dataset and maps to the [ISA-JSON Investigation](https://isa-specs.readthedocs.io/en/latest/isajson.html#investigation-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -93,7 +94,7 @@ Is based upon Dataset and maps the the [ISA-JSON Investigation](https://isa-spec
 
 ### Study
 
-Is based upon Dataset and maps the the [ISA-JSON Study](https://isa-specs.readthedocs.io/en/latest/isajson.html#study-schema-json)
+Is based upon Dataset and maps to the [ISA-JSON Study](https://isa-specs.readthedocs.io/en/latest/isajson.html#study-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -114,7 +115,7 @@ Is based upon Dataset and maps the the [ISA-JSON Study](https://isa-specs.readth
 
 ### Assay
 
-Is based upon Dataset and maps the the [ISA-JSON Assay](https://isa-specs.readthedocs.io/en/latest/isajson.html#assay-schema-json)
+Is based upon Dataset and maps to the [ISA-JSON Assay](https://isa-specs.readthedocs.io/en/latest/isajson.html#assay-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -138,7 +139,7 @@ Is based upon Dataset and maps the the [ISA-JSON Assay](https://isa-specs.readth
 
 ### LabProcess (_new type_)
 
-Has the new suggested Bioschemas LabProcess type and maps the the [ISA-JSON Process](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-schema-json)
+Has the new suggested Bioschemas LabProcess type and maps to the [ISA-JSON Process](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -175,7 +176,7 @@ Is based on the Bioschemas LapProtocol type and maps to the [ISA-JSON Protocol](
 ### Sample
 
 Is based on the Bioschemas Sample type, and represents the ISA-JSON [Sample](https://isa-specs.readthedocs.io/en/latest/isajson.html#sample-schema-json), 
-[Source](https://isa-specs.readthedocs.io/en/latest/isajson.html#source-schema-json) and [Material]https://isa-specs.readthedocs.io/en/latest/isajson.html#material-schema-json
+[Source](https://isa-specs.readthedocs.io/en/latest/isajson.html#source-schema-json) and [Material](https://isa-specs.readthedocs.io/en/latest/isajson.html#material-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
