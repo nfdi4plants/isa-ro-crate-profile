@@ -74,6 +74,8 @@ New properties that aren't currently part of the related type are shown in _ital
 
 ### Investigation
 
+Is based upon Dataset and maps the the [ISA-JSON Investigation](https://isa-specs.readthedocs.io/en/latest/isajson.html#investigation-schema-json)
+
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be 'Dataset'|
@@ -93,6 +95,8 @@ New properties that aren't currently part of the related type are shown in _ital
 
 ### Study
 
+Is based upon Dataset and maps the the [ISA-JSON Study](https://isa-specs.readthedocs.io/en/latest/isajson.html#study-schema-json)
+
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be 'Dataset'|
@@ -111,6 +115,8 @@ New properties that aren't currently part of the related type are shown in _ital
 |comment|COULD|Comment|Comment|
 
 ### Assay
+
+Is based upon Dataset and maps the the [ISA-JSON Assay](https://isa-specs.readthedocs.io/en/latest/isajson.html#assay-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -134,6 +140,8 @@ New properties that aren't currently part of the related type are shown in _ital
 
 ### LabProcess (_new type_)
 
+Has the new suggested Bioschemas LabProcess type and maps the the [ISA-JSON Process](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-schema-json)
+
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be 'LabProcess'|
@@ -148,6 +156,8 @@ New properties that aren't currently part of the related type are shown in _ital
 
 
 ### LabProtocol
+
+Is based on the Bioschemas LapProtocol type and maps to the [ISA-JSON Protocol](https://isa-specs.readthedocs.io/en/latest/isajson.html#protocol-schema-json)  
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -166,6 +176,9 @@ New properties that aren't currently part of the related type are shown in _ital
 
 ### Sample
 
+Is based on the Bioschemas Sample type, and represents the ISA-JSON [Sample](https://isa-specs.readthedocs.io/en/latest/isajson.html#sample-schema-json), 
+[Source](https://isa-specs.readthedocs.io/en/latest/isajson.html#source-schema-json) and [Material]https://isa-specs.readthedocs.io/en/latest/isajson.html#material-schema-json
+
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be 'Sample'|
@@ -175,6 +188,8 @@ New properties that aren't currently part of the related type are shown in _ital
 |_derivesFrom_|COULD|Sample|A source from which the sample is derived through processes.|
 
 ### Data
+
+Describes and points to a Data file, and maps to the [ISA-JSON Data](https://isa-specs.readthedocs.io/en/latest/isajson.html#data-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -186,6 +201,8 @@ New properties that aren't currently part of the related type are shown in _ital
 |disambiguatingDescription|COULD|Text|The type of the data file (“Raw Data File", “Derived Data File" or "Image File").|
 
 ### PropertyValue
+
+It is based on PropertyValue and maps to the [ISA-JSON Process Parameter Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-parameter-value-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -200,6 +217,8 @@ New properties that aren't currently part of the related type are shown in _ital
 |additionalType|COULD|Text|Can be used to describe if the value is a factor, characteristic or parameter.|
 
 ### Person
+
+It is based on Person, and maps to the [ISA-JSON Person](https://isa-specs.readthedocs.io/en/latest/isajson.html#person-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -217,6 +236,8 @@ New properties that aren't currently part of the related type are shown in _ital
 |disambiguatingDescription|COULD|Text|
 
 ### ScholarlyArticle
+
+It is based on ScholarlyArticle and maps to the [ISA-JSON Publication](https://isa-specs.readthedocs.io/en/latest/isajson.html#publication-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
