@@ -53,21 +53,18 @@ dataset --hasPart--> dataset
 dataset --hasPart----> DataFile
 dataset --processSequence--> Process
 
-Process --"output"---> DataFile
-Process --"output"--> BioSample
-Process --input--> BioSample
-Process --executesProtocol--> Protocol
-Process --parameterValues---> prop
+Process --"result"---> DataFile
+Process --"result"--> BioSample
+Process --object--> BioSample
+Process --executesLabProtocol--> Protocol
+Process --parameterValue---> prop
 
 BioSample --derivesFrom--> BioSample
 BioSample --additionalProperty--> prop
 
-Protocol --protocolType---> ont
-Protocol --parameters---> ont
-
-prop --category--> ont
-prop --value--> ont
-prop --unit--> ont
+Protocol --purpose---> ont
+Protocol --labEquipment---> ont
+Protocol --reagent---> ont
 
 ```
 
