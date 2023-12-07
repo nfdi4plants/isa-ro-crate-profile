@@ -30,8 +30,6 @@ The ISA RO-Crate has led to a few pending recommended changes to [Bioschemas](ht
 is being setup to define this as a new type.
 
 
-_TODO: check property names on diagram edges_
-
 ```mermaid
 flowchart TD
 
