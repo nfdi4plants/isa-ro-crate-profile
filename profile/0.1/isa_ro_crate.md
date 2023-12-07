@@ -55,7 +55,7 @@ dataset --processSequence--> Process
 
 Process --"result"---> DataFile
 Process --"result"--> BioSample
-Process --object--> BioSample
+Process --"object"--> BioSample
 Process --executesLabProtocol--> Protocol
 Process --parameterValue---> prop
 
