@@ -106,7 +106,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |creator|MUST|[schema.org/Person](https://schema.org/Person)|The performer of the study.|
 |identifier|MUST|Text or URL|Identifying descriptor of the study.|
 |headline|MUST|Text|A title of the study.|
-|hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Assay) or File|Assays contained in this study or actual data files resulting from the process sequence.|
+|hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Assay) or [File](https://schema.org/MediaObject)|Assays contained in this study or actual data files resulting from the process sequence.|
 |about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this study.|
 |description|SHOULD|Text|A short description of the study (e.g. an abstract).|
 |dateCreated|SHOULD|DateTime|When the Study was created|
@@ -127,10 +127,10 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |creator|MUST|[schema.org/Person](https://schema.org/Person)|The performer of the experiments.|
 |identifier|MUST|Text or URL|Identifying descriptor of the assay.|
 |headline|MUST|Text|A title of the assay.|
-|_processSequence_|MUST|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this assay.|
+|about|MUST|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this assay.|
 |measurementMethod|MUST|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type measurement e.g Complexomics or transcriptomics as an ontology term|
 |measurementTechnique|MUST|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type of technology used to take the measurement, e.g mass spectrometry or deep sequencing|
-|hasPart|SHOULD|File|The data files resulting from the process sequence|
+|hasPart|SHOULD|[File](https://schema.org/MediaObject)|The data files resulting from the process sequence|
 |description|SHOULD|Text|A short description of the assay (e.g. an abstract)|
 |variableMeasured|COULD|Text or [schema.org/PropertyValue](https://schema.org/PropertyValue)|The target variable being measured E.g protein concentration|
 |dateCreated|SHOULD|DateTime|When the Assay was created|
@@ -139,7 +139,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 
 
-### LabProcess (_new type_)
+### LabProcess
 
 Has the new suggested Bioschemas [bioschemas.org/LabProcess](https://bioschemas.org/LabProcess) type and maps to the [ISA-JSON Process](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-schema-json)
 
@@ -149,8 +149,8 @@ Has the new suggested Bioschemas [bioschemas.org/LabProcess](https://bioschemas.
 |@id|MUST|Text or URL|Could identify the process using the isa metadata filename and the protocol reference or process name.|
 |name|MUST|Text| -|
 |agent|MUST|[schema.org/Person](https://schema.org/Person)|The performer|
-|object|MUST|[bioschemas.org/Sample](https://bioschemas.org/Sample) or File|The input|
-|result|MUST|[bioschemas.org/Sample](https://bioschemas.org/Sample) or File|The output|
+|object|MUST|[bioschemas.org/Sample](https://bioschemas.org/Sample) or [File](https://schema.org/MediaObject)|The input|
+|result|MUST|[bioschemas.org/Sample](https://bioschemas.org/Sample) or [File](https://schema.org/MediaObject)|The output|
 |executesLabProtocol|SHOULD|[bioschemas.org/LabProtocol](https://bioschemas.org/LabProtocol)|The protocol executed|
 |parameterValue|SHOULD|[schema.org/PropertyValue](https://schema.org/PropertyValue)|A parameter value of the experimental process, usually a key-value pair using ontology terms|
 |endTime|SHOULD|DateTime||
@@ -195,7 +195,7 @@ Describes and points to a Data file, and maps to the [ISA-JSON Data](https://isa
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be 'File' or 'MediaObject'|
-|@id|MUST|File|Should be the path pointing to the file./
+|@id|MUST|[File](https://schema.org/MediaObject)|Should be the path pointing to the file./
 |name|MUST|Text or URL|The name of the file.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |encodingFormat|COULD|Text of URL|Media format as a MIME type|
