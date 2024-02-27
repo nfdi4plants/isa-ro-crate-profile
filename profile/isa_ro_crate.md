@@ -38,19 +38,19 @@ The following graph summarizes the ISA model in terms of [Bioschemas](https://bi
 ```mermaid
 flowchart TD
 
-dataset[<h2>Investigation/Study/Assay=Dataset</h2>]
+dataset[Investigation/Study/Assay=Dataset]
 
-Process[<h2>LabProcess</h2>]
+Process[LabProcess]
 
-Protocol[<h2>Protocol=LabProtocol</h2>]
+Protocol[Protocol=LabProtocol]
 
-BioSample[<h2>Source/Sample/Material=Sample</h2>]
+BioSample[Source/Sample/Material=Sample]
 
-DataFile[<h2>Data=File</h2>]
+DataFile[Data=File]
 
-ont[<h2>OntologyAnnotation=DefinedTerm</h2>]
+ont[OntologyAnnotation=DefinedTerm]
 
-prop[<h2>ParameterValue=PropertyValue</h2>]
+prop[ParameterValue=PropertyValue]
 
 dataset --hasPart--> dataset
 dataset --hasPart----> DataFile
