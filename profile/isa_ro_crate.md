@@ -141,7 +141,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 
 ### LabProcess
 
-Has the new suggested Bioschemas [bioschemas.org/LabProcess](https://bioschemas.org/LabProcess) type and maps to the [ISA-JSON Process](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-schema-json)
+Has the new Bioschemas DRAFT [bioschemas.org/LabProcess](https://bioschemas.org/LabProcess) type and maps to the [ISA-JSON Process](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
