@@ -195,10 +195,11 @@ Describes and points to a Data file, and maps to the [ISA-JSON Data](https://isa
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be 'File' or 'MediaObject'|
-|@id|MUST|[File](https://schema.org/MediaObject)|Should be the path pointing to the file./
+|@id|MUST|Text or URL|Should be the path pointing to the file./
 |name|MUST|Text or URL|The name of the file.|
+|encodingFormat|SHOULD|Text of URL|Media format as a MIME type|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
-|encodingFormat|COULD|Text of URL|Media format as a MIME type|
+|usageInfo|COULD|URL|Information on potential data fragment selector in file path.|
 |disambiguatingDescription|COULD|Text|The type of the data file (“Raw Data File", “Derived Data File" or "Image File").|
 
 ### PropertyValue
