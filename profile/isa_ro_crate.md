@@ -82,9 +82,9 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |@type |MUST|Text|must be '[schema.org/Dataset](https://schema.org/Dataset)'|
 |@id|MUST|Text or URL|Should be “./”, the investigation object represents the root data entity.|
 |additionalType|MUST|Text or URL|‘Investigation’ or ontology term to identify it as an Investigation|
-|headline|MUST|Text|A title of the investigation (e.g. a paper title).|
-|creator|MUST|[schema.org/Person](https://schema.org/Person)|The creator(s)/authors(s)/owner(s)/PI(s) of the investigation.|
 |identifier|MUST|Text or URL|Identifying descriptor of the investigation (e.g. repository name).|
+|headline|SHOULD|Text|A title of the investigation (e.g. a paper title).|
+|creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The creator(s)/authors(s)/owner(s)/PI(s) of the investigation.|
 |description|SHOULD|Text|A description of the investigation (e.g. an abstract).|
 |hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Study)|An Investigation object should contain other datasets representing the *studies* of the investigation. They must follow the Study profile.|
 |dateCreated|SHOULD|DateTime|When the Investigation was created|
@@ -102,10 +102,10 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be '[schema.org/Dataset](https://schema.org/Dataset)'|
 |@id|MUST|Text or URL|Should be a subdirectory corresponding to this study.|
-|additionalType|MUST|Text or URL|‘Study’ or ontology term to identify it as a Study|
-|creator|MUST|[schema.org/Person](https://schema.org/Person)|The performer of the study.|
 |identifier|MUST|Text or URL|Identifying descriptor of the study.|
-|headline|MUST|Text|A title of the study.|
+|additionalType|MUST|Text or URL|‘Study’ or ontology term to identify it as a Study|
+|creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the study.|
+|headline|SHOULD|Text|A title of the study.|
 |hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Assay) or [File](https://schema.org/MediaObject)|Assays contained in this study or actual data files resulting from the process sequence.|
 |about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this study.|
 |description|SHOULD|Text|A short description of the study (e.g. an abstract).|
@@ -124,18 +124,13 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |@type |MUST|Text|must be '[schema.org/Dataset](https://schema.org/Dataset)'|
 |@id|MUST|Text or URL|Should be a subdirectory corresponding to this assay.|
 |additionalType|MUST|Text or URL|‘Assay’ or ontology term to identify it as an Assay|
-|creator|MUST|[schema.org/Person](https://schema.org/Person)|The performer of the experiments.|
 |identifier|MUST|Text or URL|Identifying descriptor of the assay.|
-|headline|MUST|Text|A title of the assay.|
-|about|MUST|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this assay.|
-|measurementMethod|MUST|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type measurement e.g Complexomics or transcriptomics as an ontology term|
-|measurementTechnique|MUST|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type of technology used to take the measurement, e.g mass spectrometry or deep sequencing|
+|about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this assay.|
+|creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the experiments.|
+|measurementMethod|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type measurement e.g Complexomics or transcriptomics as an ontology term|
+|measurementTechnique|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type of technology used to take the measurement, e.g mass spectrometry or deep sequencing|
 |hasPart|SHOULD|[File](https://schema.org/MediaObject)|The data files resulting from the process sequence|
-|description|SHOULD|Text|A short description of the assay (e.g. an abstract)|
 |variableMeasured|COULD|Text or [schema.org/PropertyValue](https://schema.org/PropertyValue)|The target variable being measured E.g protein concentration|
-|dateCreated|SHOULD|DateTime|When the Assay was created|
-|dateModified|SHOULD|DateTime|When the Assay was last modified|
-|citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|A publication corresponding to this assay.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 
 
