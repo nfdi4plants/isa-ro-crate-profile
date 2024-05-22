@@ -93,6 +93,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|Publications corresponding with this investigation.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |mentions|COULD|[schema.org/DefinedTermSet](https://schema.org/DefinedTermSet)|Ontologies referenced in this investigation.|
+|url|COULD|URL|The filename or path of the metadata file describing the investigation. Optional, since in some contexts like an ARC the filename is implicit.|
 
 ### Study
 
@@ -114,6 +115,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |dateModified|COULD|DateTime|When the Study was last modified|
 |citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|A publication corresponding to the study.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
+|url|COULD|URL|The filename or path of the metadata file describing the study. Optional, since in some contexts like an ARC the filename is implicit.|
 
 ### Assay
 
@@ -132,6 +134,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |hasPart|SHOULD|[File](https://schema.org/MediaObject)|The data files resulting from the process sequence|
 |variableMeasured|COULD|Text or [schema.org/PropertyValue](https://schema.org/PropertyValue)|The target variable being measured E.g protein concentration|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
+|url|COULD|URL|The filename or path of the metadata file describing the assay. Optional, since in some contexts like an ARC the filename is implicit.|
 
 
 ### LabProcess
