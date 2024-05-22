@@ -225,8 +225,7 @@ It is based on [schema.org/Person](https://schema.org/Person), and maps to the [
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be '[schema.org/Person](https://schema.org/Person)'|
 |@id|MUST|Text or URL||
-|givenName|MUST|Text||
-|familyName|MUST|Text||
+|name|MUST|Text||
 |email|SHOULD|Text||
 |identifier|SHOULD|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this person, e.g. an ORCID. Can be of type PropertyValue to indicate the kind of reference.|
 |affiliation|SHOULD|[schema.org/Organization](https://schema.org/Organization)||
