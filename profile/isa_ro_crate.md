@@ -228,6 +228,7 @@ It is based on [schema.org/Person](https://schema.org/Person), and maps to the [
 |givenName|MUST|Text||
 |familyName|MUST|Text||
 |email|SHOULD|Text||
+|identifier|SHOULD|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this person, e.g. an ORCID. Can be of type PropertyValue to indicate the kind of reference.|
 |affiliation|SHOULD|[schema.org/Organization](https://schema.org/Organization)||
 |jobTitle|SHOULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)||
 |additionalName|COULD|Text||
@@ -248,6 +249,7 @@ It is based on [schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle
 |headline|MUST|Text||
 |author|SHOULD|[schema.org/Person](https://schema.org/Person)||
 |url|SHOULD|URL||
+|identifier|SHOULD|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this article like a DOI or PubMedID. Can be of type PropertyValue to indicate the kind of reference.|
 |creativeWorkStatus|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)|The status of the publication in terms of its stage in a lifecycle.|
 |disambiguatingDescription|COULD|Text|
 
