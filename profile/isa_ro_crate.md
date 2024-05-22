@@ -88,8 +88,8 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |description|SHOULD|Text|A description of the investigation (e.g. an abstract).|
 |hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Study)|An Investigation object should contain other datasets representing the *studies* of the investigation. They must follow the Study profile.|
 |dateCreated|SHOULD|DateTime|When the Investigation was created|
-|dateModified|SHOULD|DateTime|When the Investigation was last modified|
-|datePublished|COULD|DateTime|When the Investigation was published|
+|datePublished|SHOULD|DateTime|When the Investigation was published|
+|dateModified|COULD|DateTime|When the Investigation was last modified|
 |citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|Publications corresponding with this investigation.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |mentions|COULD|[schema.org/DefinedTermSet](https://schema.org/DefinedTermSet)|Ontologies referenced in this investigation.|
@@ -110,8 +110,8 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this study.|
 |description|SHOULD|Text|A short description of the study (e.g. an abstract).|
 |dateCreated|SHOULD|DateTime|When the Study was created|
-|dateModified|SHOULD|DateTime|When the Study was last modified|
-|datePublished|COULD|DateTime|When the Study was published|
+|datePublished|SHOULD|DateTime|When the Study was published|
+|dateModified|COULD|DateTime|When the Study was last modified|
 |citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|A publication corresponding to the study.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 
