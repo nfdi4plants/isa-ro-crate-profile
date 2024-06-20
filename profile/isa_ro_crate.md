@@ -164,16 +164,15 @@ Is based on the Bioschemas [bioschemas.org/LabProtocol](https://bioschemas.org/L
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be '[bioschemas.org/LabProtocol](https://bioschemas.org/LabProtocol)'|
 |@id|MUST|Text or URL|Could be the url pointing to the protocol resource.|
-|url|MUST|URL|Pointer to protocol resources external to the ISA-Tab that can be accessed by their Uniform Resource Identifier (URI).|
-|headline|SHOULD|Text|Main title of the LabProtocol.|
+|name|SHOULD|Text|Main title of the LabProtocol.|
 |intendedUse|SHOULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm) or Text or URL|The protocol type as an ontology term|
 |description|SHOULD|Text|A short description of the protocol (e.g. an abstract)|
+|url|COULD|URL|Pointer to protocol resources external to the ISA-Tab that can be accessed by their Uniform Resource Identifier (URI).|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |version|COULD|Number or Text|An identifier for the version to ensure protocol tracking.|
 |labEquipment|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm) or [schema.org/PropertyValue](https://schema.org/PropertyValue) or Text or URL|For LabProtocols it would be a laboratory equipment use by a person to follow one or more steps described in this LabProtocol.|
 |reagent|COULD|[schema.org/BioChemEntity](https://schema.org/BioChemEntity://bioschemas.org/Sample) or [schema.org/DefinedTerm](https://schema.org/DefinedTerm) or [schema.org/PropertyValue](https://schema.org/PropertyValue) or Text or URL|Reagents used in the protocol.|
 |computationalTool|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm) or [schema.org/PropertyValue](https://schema.org/PropertyValue) or [schema.org/SoftwareApplication](https://schema.org/SoftwareApplication)|Software or tool used as part of the lab protocol to complete a part of it.|
-|sameAs|COULD|URL|URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.|
 
 ### Sample
 
