@@ -225,7 +225,8 @@ It is based on [schema.org/Person](https://schema.org/Person), and maps to the [
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be '[schema.org/Person](https://schema.org/Person)'|
 |@id|MUST|Text or URL||
-|name|MUST|Text||
+|givenName|MUST|Text|Given name of a person. Can be used for any type of name.|
+|familyName|SHOULD|Text|Family name of a person.|
 |email|SHOULD|Text||
 |identifier|SHOULD|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this person, e.g. an ORCID. Can be of type PropertyValue to indicate the kind of reference.|
 |affiliation|SHOULD|[schema.org/Organization](https://schema.org/Organization)||
@@ -244,11 +245,10 @@ It is based on [schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be '[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)'|
 |@id|MUST|Text or URL||
-|sameAs|MUST|URL|URL of a reference Web page that unambiguously indicates the item's identity.|
 |headline|MUST|Text||
+|identifier|MUST|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this article like a DOI or PubMedID. Can be of type PropertyValue to indicate the kind of reference.|
 |author|SHOULD|[schema.org/Person](https://schema.org/Person)||
 |url|SHOULD|URL||
-|identifier|SHOULD|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this article like a DOI or PubMedID. Can be of type PropertyValue to indicate the kind of reference.|
 |creativeWorkStatus|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)|The status of the publication in terms of its stage in a lifecycle.|
 |disambiguatingDescription|COULD|Text|
 
