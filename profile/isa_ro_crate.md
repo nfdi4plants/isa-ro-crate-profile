@@ -152,6 +152,7 @@ Has the new Bioschemas DRAFT [bioschemas.org/LabProcess](https://bioschemas.org/
 |executesLabProtocol|SHOULD|[bioschemas.org/LabProtocol](https://bioschemas.org/LabProtocol)|The protocol executed|
 |parameterValue|SHOULD|[schema.org/PropertyValue](https://schema.org/PropertyValue)|A parameter value of the experimental process, usually a key-value pair using ontology terms|
 |endTime|SHOULD|DateTime||
+|disambiguatingDescription|COULD|Text|Comments|
 
 
 ### LabProtocol
@@ -192,7 +193,7 @@ Describes and points to a Data file, and maps to the [ISA-JSON Data](https://isa
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be 'File' or 'MediaObject'|
-|@id|MUST|[File](https://schema.org/MediaObject)|Should be the path pointing to the file./
+|@id|MUST|Text or URL|Should be the path pointing to the file|
 |name|MUST|Text or URL|The name of the file.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |encodingFormat|COULD|Text of URL|Media format as a MIME type|
