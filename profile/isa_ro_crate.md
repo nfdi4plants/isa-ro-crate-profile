@@ -103,19 +103,19 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |----------|----------|---------------|-------------|
 |@type |MUST|Text|must be '[schema.org/Dataset](https://schema.org/Dataset)'|
 |@id|MUST|Text or URL|Should be a subdirectory corresponding to this study.|
-|identifier|MUST|Text or URL|Identifying descriptor of the study.|
 |additionalType|MUST|Text or URL|‘Study’ or ontology term to identify it as a Study|
-|creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the study.|
+|identifier|MUST|Text or URL|Identifying descriptor of the study.|
 |headline|SHOULD|Text|A title of the study.|
-|hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Assay) or [File](https://schema.org/MediaObject)|Assays contained in this study or actual data files resulting from the process sequence.|
-|about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this study.|
+|creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the study.|
 |description|SHOULD|Text|A short description of the study (e.g. an abstract).|
+|hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Assay) or [File](https://schema.org/MediaObject)|Assays contained in this study or actual data files resulting from the process sequence.|
 |dateCreated|SHOULD|DateTime|When the Study was created|
 |datePublished|SHOULD|DateTime|When the Study was published|
 |dateModified|COULD|DateTime|When the Study was last modified|
 |citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|A publication corresponding to the study.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |url|COULD|URL|The filename or path of the metadata file describing the study. Optional, since in some contexts like an ARC the filename is implicit.|
+|about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this study.|
 
 ### Assay
 
@@ -127,14 +127,14 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |@id|MUST|Text or URL|Should be a subdirectory corresponding to this assay.|
 |additionalType|MUST|Text or URL|‘Assay’ or ontology term to identify it as an Assay|
 |identifier|MUST|Text or URL|Identifying descriptor of the assay.|
-|about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this assay.|
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the experiments.|
-|measurementMethod|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type measurement e.g Complexomics or transcriptomics as an ontology term|
-|measurementTechnique|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type of technology used to take the measurement, e.g mass spectrometry or deep sequencing|
 |hasPart|SHOULD|[File](https://schema.org/MediaObject)|The data files resulting from the process sequence|
-|variableMeasured|COULD|Text or [schema.org/PropertyValue](https://schema.org/PropertyValue)|The target variable being measured E.g protein concentration|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |url|COULD|URL|The filename or path of the metadata file describing the assay. Optional, since in some contexts like an ARC the filename is implicit.|
+|about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this assay.|
+|measurementMethod|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type measurement e.g Complexomics or transcriptomics as an ontology term|
+|measurementTechnique|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type of technology used to take the measurement, e.g mass spectrometry or deep sequencing|
+|variableMeasured|COULD|Text or [schema.org/PropertyValue](https://schema.org/PropertyValue)|The target variable being measured E.g protein concentration|
 
 
 ### LabProcess
