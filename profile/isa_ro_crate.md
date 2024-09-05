@@ -120,6 +120,8 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 
 ### Assay
 
+Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [ISA-JSON Assay](https://isa-specs.readthedocs.io/en/latest/isajson.html#assay-schema-json)
+
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL|Should be a subdirectory corresponding to this assay.|
