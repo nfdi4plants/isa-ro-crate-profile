@@ -1,5 +1,7 @@
 ## ISA RO-Crate Profile
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13748893.svg)](https://doi.org/10.5281/zenodo.13748893)
+
 [Latest version](profile/isa_ro_crate.md)
 
 ## Contributing to this repository
