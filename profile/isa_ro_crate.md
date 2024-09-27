@@ -190,7 +190,7 @@ Is based on the Bioschemas [bioschemas.org/Sample](https://bioschemas.org/Sample
 
 ### Data
 
-Describes and points to a Data file, and maps to the [ISA-JSON Data](https://isa-specs.readthedocs.io/en/latest/isajson.html#data-schema-json)
+Describes and points to a Data file or a segment of a Data file (via [data fragment selectors](https://www.w3.org/TR/annotation-model/#fragment-selector)), and maps to the [ISA-JSON Data](https://isa-specs.readthedocs.io/en/latest/isajson.html#data-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -200,6 +200,7 @@ Describes and points to a Data file, and maps to the [ISA-JSON Data](https://isa
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |disambiguatingDescription|COULD|Text|The type of the data file (“Raw Data File", “Derived Data File" or "Image File").|
 |encodingFormat|COULD|Text of URL|Media format as a MIME type|
+|usageInfo|COULD|Text of URL|Description/specification of the [data fragment selector](https://www.w3.org/TR/annotation-model/#fragment-selector), if the object describes a data fragment and a selector is present in the path/`@id`|
 
 ### PropertyValue
 
