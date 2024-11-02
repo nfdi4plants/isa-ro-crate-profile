@@ -251,6 +251,19 @@ It is based on [schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle
 |creativeWorkStatus|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)|The status of the publication in terms of its stage in a lifecycle.|
 |disambiguatingDescription|COULD|Text|
 
+### DefinedTerm
+
+It is based on [schema.org/DefinedTerm](https://schema.org/DefinedTerm) and maps to the [ISA-JSON OntologyAnnotation](https://isa-specs.readthedocs.io/en/latest/isajson.html#ontology-annotation-schema-json)
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@id|MUST|Text or URL||
+|@type |MUST|Text|must be '[schema.org/DefinedTerm](https://schema.org/DefinedTerm)'|
+|name|MUST|Text|The term name.|
+|termCode|SHOULD|Text|The identifier within the ontology.|
+|inDefinedTermSet|COULD|URL or [schema.org/DefinedTermSet](https://schema.org/DefinedTermSet)|Link to the ontology.|
+|disambiguatingDescription|COULD|Text|ISA comments|
+
 ## Example ro-crate-metadata.json
 
 _TODO: simple example and a link to a more complete example_
