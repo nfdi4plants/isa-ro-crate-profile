@@ -83,12 +83,12 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |@type|MUST|Text|must be '[schema.org/Dataset](https://schema.org/Dataset)'|
 |additionalType|MUST|Text or URL|‘Investigation’ or ontology term to identify it as an Investigation|
 |identifier|MUST|Text or URL|Identifying descriptor of the investigation (e.g. repository name).|
+|name|MUST|Text|A title of the investigation (e.g. a paper title).|
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The creator(s)/authors(s)/owner(s)/PI(s) of the investigation.|
 |dateCreated|SHOULD|DateTime|When the Investigation was created|
 |datePublished|SHOULD|DateTime|When the Investigation was published|
 |description|SHOULD|Text|A description of the investigation (e.g. an abstract).|
 |hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Study)|An Investigation object should contain other datasets representing the *studies* of the investigation. They must follow the Study profile.|
-|headline|SHOULD|Text|A title of the investigation (e.g. a paper title).|
 |citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|Publications corresponding with this investigation.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |dateModified|COULD|DateTime|When the Investigation was last modified|
@@ -105,13 +105,13 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |@type|MUST|Text|must be '[schema.org/Dataset](https://schema.org/Dataset)'|
 |additionalType|MUST|Text or URL|‘Study’ or ontology term to identify it as a Study|
 |identifier|MUST|Text or URL|Identifying descriptor of the study.|
+|name|MUSR|Text|A title of the study.|
 |about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this study.|
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the study.|
 |dateCreated|SHOULD|DateTime|When the Study was created|
 |datePublished|SHOULD|DateTime|When the Study was published|
 |description|SHOULD|Text|A short description of the study (e.g. an abstract).|
 |hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Assay) or [File](https://schema.org/MediaObject)|Assays contained in this study or actual data files resulting from the process sequence.|
-|headline|SHOULD|Text|A title of the study.|
 |citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|A publication corresponding to the study.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |dateModified|COULD|DateTime|When the Study was last modified|
