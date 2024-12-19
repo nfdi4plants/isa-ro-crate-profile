@@ -8,7 +8,7 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |@id|@id||
 |-|additionalType|for distinction from Study and Assay|
 |fileName|url||
-|title|headline||
+|title|name| RO-Crate requires a name for the root data entity. For the usecase of Google markup, we map the title to name, since the Google Dataset Search shows this property in the fashion of a title. |
 |people|creator||
 |identifier|identifier||
 |description|description||
@@ -26,7 +26,7 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |fileName|url||
 |people|creator||
 |identifier|identifier||
-|title|headline||
+|title|name| RO-Crate requires a name for the root data entity. For the usecase of Google markup, we map the title to name, since the Google Dataset Search shows this property in the fashion of a title. |
 |assays|hasPart||
 |processSequence|about||
 |description|description||
