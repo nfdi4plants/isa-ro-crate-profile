@@ -5,10 +5,10 @@
 * Authors
   * Florian Wetzels - https://orcid.org/0000-0002-5526-7138
   * Lukas Weil - https://orcid.org/0000-0003-1945-6342
+  * Kevin Schneider - https://orcid.org/0000-0002-2198-5262
   * Sebastian Beier - https://orcid.org/0000-0002-2177-8781
   * Stuart Owen - https://orcid.org/0000-0003-2130-0865
   * Timo Muehlhaus - https://orcid.org/0000-0003-3925-6778
-
 
 ## Overview
 
@@ -84,6 +84,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |additionalType|MUST|Text or URL|‘Investigation’ or ontology term to identify it as an Investigation|
 |identifier|MUST|Text or URL|Identifying descriptor of the investigation (e.g. repository name).|
 |name|MUST|Text|A title of the investigation (e.g. a paper title).|
+|license|MUST|Text or URL|The license under which the RO-Crate may be used. When no license information is available on crate creation, use the default string `'ALL RIGHTS RESERVED BY THE AUTHORS'` |
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The creator(s)/authors(s)/owner(s)/PI(s) of the investigation.|
 |dateCreated|SHOULD|DateTime|When the Investigation was created|
 |datePublished|SHOULD|DateTime|When the Investigation was published|
