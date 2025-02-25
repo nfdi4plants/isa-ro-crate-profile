@@ -25,7 +25,7 @@ The ISA RO-Crate has led to a few changes to [Bioschemas](https://bioschemas.org
 **LabProtocol** - Has been redefined as a child of [HowTo](https://schema.org/HowTo) to make it clearer that it is intended to specifically describe the planned instructions for a lab process.
 
 **LabProcess** - A new type has been defined as a child of [Action](https://schema.org/Action), to specifically describe the details and outcomes of an executed LabProtocol. 
-Thereby seperating the "what was planned" and "what happened" between LabProtocol and LabProcess respectively. 
+Thereby separating the "what was planned" and "what happened" between LabProtocol and LabProcess respectively. 
 A working group is working on the new type and adaptations of existing types.
 
 An important change to the [Bioschemas](https://bioschemas.org/) specification that is still pending is the following:
@@ -106,7 +106,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |@type|MUST|Text|must be '[schema.org/Dataset](https://schema.org/Dataset)'|
 |additionalType|MUST|Text or URL|‘Study’ or ontology term to identify it as a Study|
 |identifier|MUST|Text or URL|Identifying descriptor of the study.|
-|name|MUSR|Text|A title of the study.|
+|name|MUST|Text|A title of the study.|
 |about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this study.|
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the study.|
 |dateCreated|SHOULD|DateTime|When the Study was created|
@@ -132,7 +132,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this assay.|
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the experiments.|
 |hasPart|SHOULD|[File](https://schema.org/MediaObject)|The data files resulting from the process sequence|
-|measurementMethod|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type measurement e.g Complexomics or transcriptomics as an ontology term|
+|measurementMethod|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type measurement e.g Complexomics or Transcriptomics as an ontology term|
 |measurementTechnique|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type of technology used to take the measurement, e.g mass spectrometry or deep sequencing|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |url|COULD|URL|The filename or path of the metadata file describing the assay. Optional, since in some contexts like an ARC the filename is implicit.|
