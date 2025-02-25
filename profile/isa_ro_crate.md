@@ -84,11 +84,11 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |additionalType|MUST|Text or URL|‘Investigation’ or ontology term to identify it as an Investigation|
 |identifier|MUST|Text or URL|Identifying descriptor of the investigation (e.g. repository name).|
 |name|MUST|Text|A title of the investigation (e.g. a paper title).|
+|description|MUST|Text|A description of the investigation (e.g. an abstract).|
 |license|MUST|Text or URL|The license under which the RO-Crate may be used. When no license information is available on crate creation, use the default string `'ALL RIGHTS RESERVED BY THE AUTHORS'` |
 |datePublished|MUST|DateTime|When the Investigation was published. If the Investigation is not (yet) published, use the date of the crate creation as default value.|
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The creator(s)/authors(s)/owner(s)/PI(s) of the investigation.|
 |dateCreated|SHOULD|DateTime|When the Investigation was created|
-|description|SHOULD|Text|A description of the investigation (e.g. an abstract).|
 |hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Study)|An Investigation object should contain other datasets representing the *studies* of the investigation. They must follow the Study profile.|
 |citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|Publications corresponding with this investigation.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
