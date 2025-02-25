@@ -210,7 +210,7 @@ It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and 
 |@id|MUST|Text or URL||
 |@type |MUST|Text|must be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
 |name|MUST|Text|Key name|
-|value|MUST|Text|Value text or number|
+|value|SHOULD|Text|Value text or number|
 |propertyID|SHOULD|URL|Key ontology reference|
 |additionalType|COULD|Text|Can be used to describe if the value is a factor, characteristic or parameter.|
 |unitCode|COULD|URL|Unit ontology reference|
