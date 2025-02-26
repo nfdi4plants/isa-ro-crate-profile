@@ -250,7 +250,7 @@ It is based on [schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle
 |author|SHOULD|[schema.org/Person](https://schema.org/Person)||
 |url|SHOULD|URL||
 |creativeWorkStatus|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)|The status of the publication in terms of its stage in a lifecycle.|
-|disambiguatingDescription|COULD|Text|
+|comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 
 ### DefinedTerm
 
