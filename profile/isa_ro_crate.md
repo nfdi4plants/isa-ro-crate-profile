@@ -266,11 +266,11 @@ It is based on [schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle
 |@id|MUST|Text or URL||
 |@type |MUST|Text|must be '[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)'|
 |headline|MUST|Text||
-|identifier|MUST|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this article like a DOI or PubMedID. Can be of type PropertyValue to indicate the kind of reference.|
+|identifier|MUST|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this article like a DOI or PubMedID. Can be of type PropertyValue to indicate the kind of reference (See details in Section on PropertyValue).|
 |author|SHOULD|[schema.org/Person](https://schema.org/Person)||
 |url|SHOULD|URL||
 |creativeWorkStatus|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)|The status of the publication in terms of its stage in a lifecycle.|
-|disambiguatingDescription|COULD|Text|
+|comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 
 ### DefinedTerm
 
