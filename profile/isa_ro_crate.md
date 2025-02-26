@@ -5,10 +5,10 @@
 * Authors
   * Florian Wetzels - https://orcid.org/0000-0002-5526-7138
   * Lukas Weil - https://orcid.org/0000-0003-1945-6342
+  * Kevin Schneider - https://orcid.org/0000-0002-2198-5262
   * Sebastian Beier - https://orcid.org/0000-0002-2177-8781
   * Stuart Owen - https://orcid.org/0000-0003-2130-0865
   * Timo Muehlhaus - https://orcid.org/0000-0003-3925-6778
-
 
 ## Overview
 
@@ -25,7 +25,7 @@ The ISA RO-Crate has led to a few changes to [Bioschemas](https://bioschemas.org
 **LabProtocol** - Has been redefined as a child of [HowTo](https://schema.org/HowTo) to make it clearer that it is intended to specifically describe the planned instructions for a lab process.
 
 **LabProcess** - A new type has been defined as a child of [Action](https://schema.org/Action), to specifically describe the details and outcomes of an executed LabProtocol. 
-Thereby seperating the "what was planned" and "what happened" between LabProtocol and LabProcess respectively. 
+Thereby separating the "what was planned" and "what happened" between LabProtocol and LabProcess respectively. 
 A working group is working on the new type and adaptations of existing types.
 
 An important change to the [Bioschemas](https://bioschemas.org/) specification that is still pending is the following:
@@ -84,10 +84,11 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |additionalType|MUST|Text or URL|‘Investigation’ or ontology term to identify it as an Investigation|
 |identifier|MUST|Text or URL|Identifying descriptor of the investigation (e.g. repository name).|
 |name|MUST|Text|A title of the investigation (e.g. a paper title).|
+|description|MUST|Text|A description of the investigation (e.g. an abstract).|
+|license|MUST|Text or URL|The license under which the RO-Crate may be used. When no license information is available on crate creation, use the default string `'ALL RIGHTS RESERVED BY THE AUTHORS'` |
+|datePublished|MUST|DateTime|When the Investigation was published. If the Investigation is not (yet) published, use the date of the crate creation as default value.|
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The creator(s)/authors(s)/owner(s)/PI(s) of the investigation.|
 |dateCreated|SHOULD|DateTime|When the Investigation was created|
-|datePublished|SHOULD|DateTime|When the Investigation was published|
-|description|SHOULD|Text|A description of the investigation (e.g. an abstract).|
 |hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Study)|An Investigation object should contain other datasets representing the *studies* of the investigation. They must follow the Study profile.|
 |citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|Publications corresponding with this investigation.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
@@ -105,7 +106,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |@type|MUST|Text|must be '[schema.org/Dataset](https://schema.org/Dataset)'|
 |additionalType|MUST|Text or URL|‘Study’ or ontology term to identify it as a Study|
 |identifier|MUST|Text or URL|Identifying descriptor of the study.|
-|name|MUSR|Text|A title of the study.|
+|name|MUST|Text|A title of the study.|
 |about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this study.|
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the study.|
 |dateCreated|SHOULD|DateTime|When the Study was created|
@@ -131,7 +132,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this assay.|
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the experiments.|
 |hasPart|SHOULD|[File](https://schema.org/MediaObject)|The data files resulting from the process sequence|
-|measurementMethod|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type measurement e.g Complexomics or transcriptomics as an ontology term|
+|measurementMethod|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type measurement e.g Complexomics or Transcriptomics as an ontology term|
 |measurementTechnique|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type of technology used to take the measurement, e.g mass spectrometry or deep sequencing|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |url|COULD|URL|The filename or path of the metadata file describing the assay. Optional, since in some contexts like an ARC the filename is implicit.|
@@ -147,9 +148,9 @@ Has the new Bioschemas DRAFT [bioschemas.org/LabProcess](https://bioschemas.org/
 |@type |MUST|Text|must be '[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)'|
 |@id|MUST|Text or URL|Could identify the process using the isa metadata filename and the protocol reference or process name.|
 |name|MUST|Text| -|
-|agent|MUST|[schema.org/Person](https://schema.org/Person)|The performer|
-|object|MUST|[bioschemas.org/Sample](https://bioschemas.org/Sample) or [File](https://schema.org/MediaObject)|The input|
-|result|MUST|[bioschemas.org/Sample](https://bioschemas.org/Sample) or [File](https://schema.org/MediaObject)|The output|
+|object|SHOULD|[bioschemas.org/Sample](https://bioschemas.org/Sample) or [File](https://schema.org/MediaObject)|The input|
+|result|SHOULD|[bioschemas.org/Sample](https://bioschemas.org/Sample) or [File](https://schema.org/MediaObject)|The output|
+|agent|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer|
 |executesLabProtocol|SHOULD|[bioschemas.org/LabProtocol](https://bioschemas.org/LabProtocol)|The protocol executed|
 |parameterValue|SHOULD|[schema.org/PropertyValue](https://schema.org/PropertyValue)|A parameter value of the experimental process, usually a key-value pair using ontology terms|
 |endTime|SHOULD|DateTime||
@@ -209,7 +210,7 @@ It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and 
 |@id|MUST|Text or URL||
 |@type |MUST|Text|must be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
 |name|MUST|Text|Key name|
-|value|MUST|Text|Value text or number|
+|value|SHOULD|Text|Value text or number|
 |propertyID|SHOULD|URL|Key ontology reference|
 |additionalType|COULD|Text|Can be used to describe if the value is a factor, characteristic or parameter.|
 |unitCode|COULD|URL|Unit ontology reference|
