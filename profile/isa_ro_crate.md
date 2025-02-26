@@ -217,6 +217,26 @@ It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and 
 |unitText|COULD|Text|Unit name|
 |valueReference|COULD|URL|Value ontology reference|
 
+#### PropertyValue-DOI
+
+If a [schema.org/PropertyValue](https://schema.org/PropertyValue) object represents a [DOI](https://www.doi.org/) identifier of an article, it is supposed to have the following exact values:
+
+| Property | Required | Required Value | Description |
+|----------|----------|---------------|-------------|
+|name|MUST|'DOI'||
+|value|SHOULD|-|The DOI without the 'https://www.doi.org' prefix|
+|propertyID|MUST|'http://purl.obolibrary.org/obo/OBI_0002110'|Ontology term describing a DOI|
+
+#### PropertyValue-PubMedID
+
+If a [schema.org/PropertyValue](https://schema.org/PropertyValue) object represents a [PubMedID](https://pubmed.ncbi.nlm.nih.gov/) identifier of an article, it is supposed to have the following exact values:
+
+| Property | Required | Required Value | Description |
+|----------|----------|---------------|-------------|
+|name|MUST|'PubMedID'||
+|value|SHOULD|-|The PubMedID|
+|propertyID|MUST|'http://purl.obolibrary.org/obo/OBI_0001617'|Ontology term describing a PubMedID|
+
 ### Person
 
 It is based on [schema.org/Person](https://schema.org/Person), and maps to the [ISA-JSON Person](https://isa-specs.readthedocs.io/en/latest/isajson.html#person-schema-json)
@@ -250,7 +270,7 @@ It is based on [schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle
 |author|SHOULD|[schema.org/Person](https://schema.org/Person)||
 |url|SHOULD|URL||
 |creativeWorkStatus|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)|The status of the publication in terms of its stage in a lifecycle.|
-|comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
+|disambiguatingDescription|COULD|Text|
 
 ### DefinedTerm
 
