@@ -129,6 +129,8 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |@type|MUST|Text|must be '[schema.org/Dataset](https://schema.org/Dataset)'|
 |additionalType|MUST|Text or URL|‘Assay’ or ontology term to identify it as an Assay|
 |identifier|MUST|Text or URL|Identifying descriptor of the assay.|
+|name|SHOULD|Text|A title of the assay.|
+|description|SHOULD|Text|A short description of the assay (e.g. an abstract).|
 |about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this assay.|
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the experiments.|
 |hasPart|SHOULD|[File](https://schema.org/MediaObject)|The data files resulting from the process sequence. MUST not be used to directly point to data fragments.|
