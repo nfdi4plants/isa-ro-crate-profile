@@ -95,6 +95,8 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |comments|comment||
 |-|encodingFormat|ARC-specific property|
 |type|disambiguatingDescription||
+|-|hasPart|ARC-specific property|
+|-|usageInfo|ARC-specific property|
 ||
 |[Person](https://isa-specs.readthedocs.io/en/latest/isajson.html#person-schema-json)|[schema.org/Person](https://schema.org/Person)|
 |@id|@id||
