@@ -131,7 +131,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |identifier|MUST|Text or URL|Identifying descriptor of the assay.|
 |about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this assay.|
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the experiments.|
-|hasPart|SHOULD|[File](https://schema.org/MediaObject)|The data files resulting from the process sequence|
+|hasPart|SHOULD|[File](https://schema.org/MediaObject)|The data files resulting from the process sequence. MUST not be used to directly point to data fragments.|
 |measurementMethod|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type measurement e.g Complexomics or Transcriptomics as an ontology term|
 |measurementTechnique|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type of technology used to take the measurement, e.g mass spectrometry or deep sequencing|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
@@ -200,7 +200,8 @@ Describes and points to a Data file or a segment of a Data file (via [data fragm
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |disambiguatingDescription|COULD|Text|The type of the data file (“Raw Data File", “Derived Data File" or "Image File").|
 |encodingFormat|COULD|Text of URL|Media format as a MIME type|
-|usageInfo|COULD|Text of URL|Description/specification of the [data fragment selector](https://www.w3.org/TR/annotation-model/#fragment-selector), if the object describes a data fragment and a selector is present in the path/`@id`|
+|hasPart|COULD|Text of URL|Data fragments of this Data object, described by [data fragment selectors](https://www.w3.org/TR/annotation-model/#fragment-selector). SHOULD not be used on data fragments.|
+|usageInfo|COULD|Text of URL|Description/specification of the [data fragment selector](https://www.w3.org/TR/annotation-model/#fragment-selector), if the object describes a data fragment and a selector is present in the path/`@id`. SHOULD only be used on data fragments.|
 
 ### PropertyValue
 
