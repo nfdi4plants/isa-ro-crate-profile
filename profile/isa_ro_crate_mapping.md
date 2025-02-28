@@ -12,13 +12,14 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |people|creator||
 |identifier|identifier||
 |description|description||
-|studies|hasPart||
+|studies|hasPart|MAY also directly point to assays|
 |submissionDate|dateCreated||
 |-|dateModified||
 |publicReleaseDate|datePublished||
 |publications|citation||
 |comments|comment||
 |onntologySourceReferences|mentions||
+|-|license|RO-Crate-specific property|
 ||
 |[Study](https://isa-specs.readthedocs.io/en/latest/isajson.html#study-schema-json)|[Dataset](https://schema.org/Dataset)||
 |@id|@id||
@@ -45,9 +46,11 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |[Assay](https://isa-specs.readthedocs.io/en/latest/isajson.html#assay-schema-json)|[Dataset](https://schema.org/Dataset)||
 |@id|@id||
 |-|additionalType|for distinction from Investigation and Study|
-|-|identifier||
+|-|identifier|ISA-XLSX-specific property (Assay Identifier)|
+|-|name|ISA-XLSX-specific property (Assay Title)|
+|-|description|ISA-XLSX-specific property (Assay Identifier)|
 |processSequence|about||
-|-|creator|ARC-specific property|
+|-|creator|ISA-XLSX-specific property (Assay Performers)|
 |technologyType|measurementMethod||
 |technologyPlatform|measurementTechnique||
 |dataFiles|hasPart||
@@ -74,7 +77,7 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |protocolType|intendedUse||
 |description|description||
 |uri|url||
-|-|comment|ARC-specific property|
+|comments|comment||
 |version|version||
 |components|labEquipment|Components can be saved as `labEquipment`, `reagent`, or `computationalTool`, with `labEquipment` being the default.|
 |components|reagent|Components can be saved as `labEquipment`, `reagent`, or `computationalTool`, with `labEquipment` being the default.|
@@ -93,10 +96,10 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |@id|@id||
 |name|name||
 |comments|comment||
-|-|encodingFormat|ARC-specific property|
+|-|encodingFormat|ISA-XLSX-specific property (Data Format)|
 |type|disambiguatingDescription||
-|-|hasPart|ARC-specific property|
-|-|usageInfo|ARC-specific property|
+|-|hasPart|RO-Crate-specific property|
+|-|usageInfo|ISA-XLSX-specific property (Data Selector Format)|
 ||
 |[Person](https://isa-specs.readthedocs.io/en/latest/isajson.html#person-schema-json)|[schema.org/Person](https://schema.org/Person)|
 |@id|@id||
