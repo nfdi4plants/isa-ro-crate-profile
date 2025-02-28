@@ -113,8 +113,8 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |[Publication](https://isa-specs.readthedocs.io/en/latest/isajson.html#publication-schema-json)|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|
 |@id|@id||
 |title|headline||
-|pubMedID|identifier|One or many identifiers for this article (DOI or PubMedID) can be encoded in identifier. Either as full URL or of type PropertyValue to indicate the kind of reference.|
-|doi|identifier|One or many identifiers for this article (DOI or PubMedID) can be encoded in identifier. Either as full URL or of type PropertyValue to indicate the kind of reference.|
+|pubMedID|identifier|One or many identifiers for this article (DOI or PubMedID) can be encoded in identifier. Either as full URL or of type PropertyValue to indicate the kind of reference. For proper formatting as `pubMedID`, see [this](isa_ro_crate.md/#propertyvalue-pubmedid).|
+|doi|identifier|One or many identifiers for this article (DOI or PubMedID) can be encoded in identifier. Either as full URL or of type PropertyValue to indicate the kind of reference. For proper formatting as `doi`, see [this](isa_ro_crate.md/#propertyvalue-doi).|
 |authorList|author||
 |status|creativeWorkStatus|
 |comments|comment||
