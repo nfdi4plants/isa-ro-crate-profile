@@ -89,7 +89,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |datePublished|MUST|DateTime|When the Investigation was published. If the Investigation is not (yet) published, use the date of the crate creation as default value.|
 |creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The creator(s)/authors(s)/owner(s)/PI(s) of the investigation.|
 |dateCreated|SHOULD|DateTime|When the Investigation was created|
-|hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Study)|An Investigation object should contain other datasets representing the *studies* of the investigation. The dataset objects in this list must follow the Study profile or the Assay profile defined in this documents.|
+|hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Study or Assay)|An Investigation object should contain other datasets representing the *studies* of the investigation. The dataset objects in this list must follow the Study profile or the Assay profile defined in this documents.|
 |citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|Publications corresponding with this investigation.|
 |comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
 |dateModified|COULD|DateTime|When the Investigation was last modified|
