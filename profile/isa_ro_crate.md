@@ -205,6 +205,64 @@ Describes and points to a Data file or a segment of a Data file (via [data fragm
 |hasPart|COULD|Text of URL|Data fragments of this Data object, described by [data fragment selectors](https://www.w3.org/TR/annotation-model/#fragment-selector). SHOULD not be used on data fragments.|
 |usageInfo|COULD|Text of URL|Description/specification of the [data fragment selector](https://www.w3.org/TR/annotation-model/#fragment-selector), if the object describes a data fragment and a selector is present in the path/`@id`. SHOULD only be used on data fragments.|
 
+### Person
+
+It is based on [schema.org/Person](https://schema.org/Person), and maps to the [ISA-JSON Person](https://isa-specs.readthedocs.io/en/latest/isajson.html#person-schema-json)
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@id|MUST|Text or URL||
+|@type |MUST|Text|must be '[schema.org/Person](https://schema.org/Person)'|
+|givenName|MUST|Text|Given name of a person. Can be used for any type of name.|
+|affiliation|SHOULD|[schema.org/Organization](https://schema.org/Organization)||
+|email|SHOULD|Text||
+|familyName|SHOULD|Text|Family name of a person.|
+|identifier|SHOULD|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this person, e.g. an ORCID. Can be of type PropertyValue to indicate the kind of reference.|
+|jobTitle|SHOULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)||
+|additionalName|COULD|Text||
+|address|COULD|PostalAddress or Text||
+|disambiguatingDescription|COULD|Text||
+|faxNumber|COULD|Text||
+|telephone|COULD|Text||
+
+### ScholarlyArticle
+
+It is based on [schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle) and maps to the [ISA-JSON Publication](https://isa-specs.readthedocs.io/en/latest/isajson.html#publication-schema-json)
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@id|MUST|Text or URL||
+|@type |MUST|Text|must be '[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)'|
+|headline|MUST|Text||
+|identifier|MUST|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this article like a DOI or PubMedID. Can be of type PropertyValue to indicate the kind of reference (See details in Section on PropertyValue).|
+|author|SHOULD|[schema.org/Person](https://schema.org/Person)||
+|creativeWorkStatus|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)|The status of the publication in terms of its stage in a lifecycle.|
+|comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
+
+### Comment
+
+It is based on [schema.org/Comment](https://schema.org/Comment) and maps to the [ISA-JSON Comment](https://isa-specs.readthedocs.io/en/latest/isajson.html#comment-schema-json)
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@id|MUST|Text or URL||
+|@type |MUST|Text|must be '[schema.org/Comment](https://schema.org/Comment)'|
+|name|SHOULD|Text||
+|text|SHOULD|Text||
+
+### DefinedTerm
+
+It is based on [schema.org/DefinedTerm](https://schema.org/DefinedTerm) and maps to the [ISA-JSON OntologyAnnotation](https://isa-specs.readthedocs.io/en/latest/isajson.html#ontology-annotation-schema-json)
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@id|MUST|Text or URL||
+|@type |MUST|Text|must be '[schema.org/DefinedTerm](https://schema.org/DefinedTerm)'|
+|name|MUST|Text|The term name.|
+|termCode|SHOULD|Text|The identifier within the ontology.|
+|inDefinedTermSet|COULD|URL or [schema.org/DefinedTermSet](https://schema.org/DefinedTermSet)|Link to the ontology.|
+|disambiguatingDescription|COULD|Text|ISA comments|
+
 ### PropertyValue
 
 It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the [ISA-JSON Process Parameter Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-parameter-value-schema-json)
@@ -241,53 +299,6 @@ If a [schema.org/PropertyValue](https://schema.org/PropertyValue) object represe
 |value|SHOULD|-|The PubMedID|
 |propertyID|MUST|'http://purl.obolibrary.org/obo/OBI_0001617'|Ontology term describing a PubMedID|
 
-### Person
-
-It is based on [schema.org/Person](https://schema.org/Person), and maps to the [ISA-JSON Person](https://isa-specs.readthedocs.io/en/latest/isajson.html#person-schema-json)
-
-| Property | Required | Expected Type | Description |
-|----------|----------|---------------|-------------|
-|@id|MUST|Text or URL||
-|@type |MUST|Text|must be '[schema.org/Person](https://schema.org/Person)'|
-|givenName|MUST|Text|Given name of a person. Can be used for any type of name.|
-|affiliation|SHOULD|[schema.org/Organization](https://schema.org/Organization)||
-|email|SHOULD|Text||
-|familyName|SHOULD|Text|Family name of a person.|
-|identifier|SHOULD|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this person, e.g. an ORCID. Can be of type PropertyValue to indicate the kind of reference.|
-|jobTitle|SHOULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)||
-|additionalName|COULD|Text||
-|address|COULD|PostalAddress or Text||
-|disambiguatingDescription|COULD|Text||
-|faxNumber|COULD|Text||
-|telephone|COULD|Text||
-
-### ScholarlyArticle
-
-It is based on [schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle) and maps to the [ISA-JSON Publication](https://isa-specs.readthedocs.io/en/latest/isajson.html#publication-schema-json)
-
-| Property | Required | Expected Type | Description |
-|----------|----------|---------------|-------------|
-|@id|MUST|Text or URL||
-|@type |MUST|Text|must be '[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)'|
-|headline|MUST|Text||
-|identifier|MUST|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this article like a DOI or PubMedID. Can be of type PropertyValue to indicate the kind of reference (See details in Section on PropertyValue).|
-|author|SHOULD|[schema.org/Person](https://schema.org/Person)||
-|url|SHOULD|URL||
-|creativeWorkStatus|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)|The status of the publication in terms of its stage in a lifecycle.|
-|comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
-
-### DefinedTerm
-
-It is based on [schema.org/DefinedTerm](https://schema.org/DefinedTerm) and maps to the [ISA-JSON OntologyAnnotation](https://isa-specs.readthedocs.io/en/latest/isajson.html#ontology-annotation-schema-json)
-
-| Property | Required | Expected Type | Description |
-|----------|----------|---------------|-------------|
-|@id|MUST|Text or URL||
-|@type |MUST|Text|must be '[schema.org/DefinedTerm](https://schema.org/DefinedTerm)'|
-|name|MUST|Text|The term name.|
-|termCode|SHOULD|Text|The identifier within the ontology.|
-|inDefinedTermSet|COULD|URL or [schema.org/DefinedTermSet](https://schema.org/DefinedTermSet)|Link to the ontology.|
-|disambiguatingDescription|COULD|Text|ISA comments|
 
 ## Example ro-crate-metadata.json
 
