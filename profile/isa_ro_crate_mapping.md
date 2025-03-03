@@ -12,7 +12,7 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |people|creator||
 |identifier|identifier||
 |description|description||
-|studies|hasPart|MAY also directly point to assays|
+|studies|hasPart|In contrast to basic ISA, this property MAY also point to assays in addition to studies.|
 |submissionDate|dateCreated||
 |-|dateModified||
 |publicReleaseDate|datePublished||
@@ -48,7 +48,7 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |-|additionalType|for distinction from Investigation and Study|
 |-|identifier|ISA-XLSX-specific property (Assay Identifier)|
 |-|name|ISA-XLSX-specific property (Assay Title)|
-|-|description|ISA-XLSX-specific property (Assay Identifier)|
+|-|description|ISA-XLSX-specific property (Assay Description)|
 |processSequence|about||
 |-|creator|ISA-XLSX-specific property (Assay Performers)|
 |technologyType|measurementMethod||
@@ -98,7 +98,7 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |comments|comment||
 |-|encodingFormat|ISA-XLSX-specific property (Data Format)|
 |type|disambiguatingDescription||
-|-|hasPart|RO-Crate-specific property|
+|-|hasPart|ISA-RO-Crate-specific property|
 |-|usageInfo|ISA-XLSX-specific property (Data Selector Format)|
 ||
 |[Person](https://isa-specs.readthedocs.io/en/latest/isajson.html#person-schema-json)|[schema.org/Person](https://schema.org/Person)|
