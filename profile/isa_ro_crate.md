@@ -188,7 +188,6 @@ Is based on the Bioschemas [bioschemas.org/Sample](https://bioschemas.org/Sample
 |@type |MUST|Text|must be '[bioschemas.org/Sample](https://bioschemas.org/Sample)'|
 |name|MUST|Text|A name identifying the sample.|
 |additionalProperty|SHOULD|[schema.org/PropertyValue](https://schema.org/PropertyValue)|characteristics or factors|
-|_derivesFrom_|COULD|[bioschemas.org/Sample](https://bioschemas.org/Sample)|A source from which the sample is derived through processes.|
 
 ### Data
 
