@@ -67,7 +67,7 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |executesProtocol|executesLabProtocol||
 |parameterValues|parameterValue||
 |date|endTime||
-|comments|disambiguatingDescription||
+|comments|disambiguatingDescription|For types without `comment` property, the ISA Comment object has to be encoded as a string of the following format containing (if present) `Name` and `Value`: `"Comment {Name = "MyKey", Value = "MyValue"}"`. Quotation must be escaped via standard json escape rules.|
 |previousProcess|-|redundant information|
 |nextProcess|-|redundant information|
 ||
@@ -111,7 +111,7 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |roles|jobTitle||
 |midInitials|additionalName||
 |address|address||
-|comments|disambiguatingDescription|Comment object in ISA has to be encoded as a string.|
+|comments|disambiguatingDescription|For types without `comment` property, the ISA Comment object has to be encoded as a string of the following format containing (if present) `Name` and `Value`: `"Comment {Name = "MyKey", Value = "MyValue"}"`. Quotation must be escaped via standard json escape rules.|
 |fax|faxNumber||
 |phone|telephone||
 ||
@@ -134,7 +134,7 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |annotationValue|name||
 |termAccession|termCode||
 |termSource|inDefinedTermSet||
-|comments|disambiguatingDescription|Comment object in ISA has to be encoded as a string.|
+|comments|disambiguatingDescription|For types without `comment` property, the ISA Comment object has to be encoded as a string of the following format containing (if present) `Name` and `Value`: `"Comment {Name = "MyKey", Value = "MyValue"}"`. Quotation must be escaped via standard json escape rules.|
 ||
 |[FactorValue](https://isa-specs.readthedocs.io/en/latest/isajson.html#factor-value-schema-json)|[schema.org/PropertyValue](https://schema.org/PropertyValue)|See details for properties [below](#key-value-unit-triples).|
 |[MaterialAttributeValue](https://isa-specs.readthedocs.io/en/latest/isajson.html#material-attribute-value-schema-json)|[schema.org/PropertyValue](https://schema.org/PropertyValue)|See details for properties [below](#key-value-unit-triples).|
