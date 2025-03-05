@@ -166,4 +166,4 @@ The unit is again an ontology term that has to be resolved into a URL and a name
 |unit|unitCode|Ontology URL of the unit.|
 |unit|unitText|Name of the unit.|
 |value|valueReference|Ontology URL or ontology term objetc of the value.|
-|-|additionalType||Can be used to describe if the value is a factor, characteristic or parameter.|
+|-|additionalType|SHOULD be used to describe if the value is a factor, characteristic or parameter by using one of the following string values: "FactorValue", "CharacteristicValue", or "ParameterValue"|

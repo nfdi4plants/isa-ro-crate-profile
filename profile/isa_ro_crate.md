@@ -264,7 +264,7 @@ It is based on [schema.org/DefinedTerm](https://schema.org/DefinedTerm) and maps
 
 ### PropertyValue
 
-It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the [ISA-JSON Process Parameter Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-parameter-value-schema-json)
+It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the ISA-JSON Key-Value-Unit Triples [Process Parameter Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-parameter-value-schema-json), [Material Attribute Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#material-attribute-value-schema-json), and [Factor Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#factor-value-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -273,7 +273,7 @@ It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and 
 |name|MUST|Text|Key name|
 |value|SHOULD|Text|Value text or number|
 |propertyID|SHOULD|URL|Key ontology reference|
-|additionalType|COULD|Text|Can be used to describe if the value is a factor, characteristic or parameter.|
+|additionalType|SHOULD|Text|Can be used to describe if the value is a factor, characteristic or parameter by using one of the following string values: `"FactorValue"`, `"CharacteristicValue"`, or `"ParameterValue"`|
 |unitCode|COULD|URL|Unit ontology reference|
 |unitText|COULD|Text|Unit name|
 |valueReference|COULD|URL|Value ontology reference|
