@@ -80,7 +80,7 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL|Should be “./”, the investigation object represents the root data entity.|
-|@type|MUST|Text|must be '[schema.org/Dataset](https://schema.org/Dataset)'|
+|@type|MUST|Text|MUST be '[schema.org/Dataset](https://schema.org/Dataset)'|
 |additionalType|MUST|Text or URL|‘Investigation’ or ontology term to identify it as an Investigation|
 |identifier|MUST|Text or URL|Identifying descriptor of the investigation (e.g. repository name).|
 |name|MUST|Text|A title of the investigation (e.g. a paper title).|
@@ -264,7 +264,7 @@ It is based on [schema.org/DefinedTerm](https://schema.org/DefinedTerm) and maps
 
 ### PropertyValue
 
-It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the ISA-JSON Key-Value-Unit Triples [Process Parameter Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-parameter-value-schema-json), [Material Attribute Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#material-attribute-value-schema-json), and [Factor Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#factor-value-schema-json)
+General profile for key-value pairs. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue).
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -273,12 +273,74 @@ It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and 
 |name|MUST|Text|Key name|
 |value|SHOULD|Text|Value text or number|
 |propertyID|SHOULD|URL|Key ontology reference|
-|additionalType|SHOULD|Text|Can be used to describe if the value is a factor, characteristic or parameter by using one of the following string values: `"FactorValue"`, `"CharacteristicValue"`, or `"ParameterValue"`|
+|additionalType|Could|Text|Can be used to further clarify the type of this property|
 |unitCode|COULD|URL|Unit ontology reference|
 |unitText|COULD|Text|Unit name|
 |valueReference|COULD|URL|Value ontology reference|
 
-#### PropertyValue-DOI
+### PropertyValue - Parameter
+
+Represents a process parameter. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the ISA-JSON Key-Value-Unit Triples [Process Parameter Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-parameter-value-schema-json)
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@id|MUST|Text or URL||
+|@type |MUST|Text|must be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
+|name|MUST|Text|Key name|
+|additionalType|MUST|Text|MUST be `"ParameterValue"`|
+|value|SHOULD|Text|Value text or number|
+|propertyID|SHOULD|URL|Key ontology reference|
+|unitCode|COULD|URL|Unit ontology reference|
+|unitText|COULD|Text|Unit name|
+|valueReference|COULD|URL|Value ontology reference|
+
+### PropertyValue - Characteristic
+
+Represents a characteristic. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the ISA-JSON Key-Value-Unit Triple [Material Attribute Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#material-attribute-value-schema-json)
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@id|MUST|Text or URL||
+|@type |MUST|Text|must be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
+|name|MUST|Text|Key name|
+|additionalType|MUST|Text|MUST be `"CharacteristicValue"`|
+|value|SHOULD|Text|Value text or number|
+|propertyID|SHOULD|URL|Key ontology reference|
+|unitCode|COULD|URL|Unit ontology reference|
+|unitText|COULD|Text|Unit name|
+|valueReference|COULD|URL|Value ontology reference|
+
+### PropertyValue - Factor
+
+Represents a factor. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the ISA-JSON Key-Value-Unit Triple [Factor Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#factor-value-schema-json)
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@id|MUST|Text or URL||
+|@type |MUST|Text|must be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
+|name|MUST|Text|Key name|
+|additionalType|MUST|Text|MUST be `"CharacteristicValue"`|
+|value|SHOULD|Text|Value text or number|
+|propertyID|SHOULD|URL|Key ontology reference|
+|unitCode|COULD|URL|Unit ontology reference|
+|unitText|COULD|Text|Unit name|
+|valueReference|COULD|URL|Value ontology reference|
+
+### PropertyValue - Component
+
+Represents a protocol component. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the a component of an [ISA-JSON protocol](https://isa-specs.readthedocs.io/en/latest/isajson.html#protocol-schema-json)
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@id|MUST|Text or URL||
+|@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
+|name|MUST|Text|Key name|
+|value|SHOULD|Text|Value text or number|
+|propertyID|SHOULD|URL|Key ontology reference|
+|additionalType|SHOULD|Text|MUST be `"Component"`|
+|valueReference|COULD|URL|Value ontology reference|
+
+#### PropertyValue - DOI
 
 If a [schema.org/PropertyValue](https://schema.org/PropertyValue) object represents a [DOI](https://www.doi.org/) identifier of an article, it is supposed to have the following exact values:
 
@@ -288,7 +350,7 @@ If a [schema.org/PropertyValue](https://schema.org/PropertyValue) object represe
 |value|SHOULD|-|The DOI without the 'https://www.doi.org' prefix|
 |propertyID|MUST|'http://purl.obolibrary.org/obo/OBI_0002110'|Ontology term describing a DOI|
 
-#### PropertyValue-PubMedID
+#### PropertyValue - PubMedID
 
 If a [schema.org/PropertyValue](https://schema.org/PropertyValue) object represents a [PubMedID](https://pubmed.ncbi.nlm.nih.gov/) identifier of an article, it is supposed to have the following exact values:
 
