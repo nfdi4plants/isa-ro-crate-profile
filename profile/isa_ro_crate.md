@@ -24,8 +24,8 @@ The ISA RO-Crate has led to a few changes to [Bioschemas](https://bioschemas.org
   
 **LabProtocol** - Has been redefined as a child of [HowTo](https://schema.org/HowTo) to make it clearer that it is intended to specifically describe the planned instructions for a lab process.
 
-**LabProcess** - A new type has been defined as a child of [Action](https://schema.org/Action), to specifically describe the details and outcomes of an executed LabProtocol. 
-Thereby separating the "what was planned" and "what happened" between LabProtocol and LabProcess respectively. 
+**LabProcess** - A new type has been defined as a child of [Action](https://schema.org/Action), to specifically describe the details and outcomes of an executed LabProtocol.
+Thereby separating the "what was planned" and "what happened" between LabProtocol and LabProcess respectively.
 A working group is working on the new type and adaptations of existing types.
 
 An important change to the [Bioschemas](https://bioschemas.org/) specification that is still pending is the following:
@@ -33,7 +33,6 @@ An important change to the [Bioschemas](https://bioschemas.org/) specification t
 **Dataset** - A new property _processSequence_ to describe how the Dataset was created.
 
 The following graph summarizes the ISA model in terms of [Bioschemas](https://bioschemas.org/)/[Schema.org](https://schema.org/) vocabulary:
-
 
 ```mermaid
 flowchart TD
@@ -87,11 +86,11 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 |description|MUST|Text|A description of the investigation (e.g. an abstract).|
 |license|MUST|Text or URL|The license under which the RO-Crate may be used. When no license information is available on crate creation, use the default string `'ALL RIGHTS RESERVED BY THE AUTHORS'` |
 |datePublished|MUST|DateTime|When the Investigation was published. If the Investigation is not (yet) published, use the date of the crate creation as default value.|
-|creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The creator(s)/authors(s)/owner(s)/PI(s) of the investigation.|
+|creator|SHOULD|[schema.org/Person](#person)|The creator(s)/authors(s)/owner(s)/PI(s) of the investigation.|
 |dateCreated|SHOULD|DateTime|When the Investigation was created|
-|hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Study or Assay)|An Investigation object should contain other datasets representing the *studies* of the investigation. The dataset objects in this list must follow the Study profile or the Assay profile defined in this documents.|
-|citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|Publications corresponding with this investigation.|
-|comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
+|hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) ([Study](#study) or [Assay](#assay))|An Investigation object should contain other datasets representing the _studies_ of the investigation. The dataset objects in this list MUST follow the [Study profile](#study) or the [Assay profile](#assay) defined in this document.|
+|citation|COULD|[schema.org/ScholarlyArticle](#scholarlyarticle)|Publications corresponding with this investigation.|
+|comment|COULD|[schema.org/Comment](#comment)|Comment|
 |dateModified|COULD|DateTime|When the Investigation was last modified|
 |mentions|COULD|[schema.org/DefinedTermSet](https://schema.org/DefinedTermSet)|Ontologies referenced in this investigation.|
 |url|COULD|URL|The filename or path of the metadata file describing the investigation. Optional, since in some contexts like an ARC the filename is implicit.|
@@ -103,21 +102,20 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL|Should be a subdirectory corresponding to this study.|
-|@type|MUST|Text|must be '[schema.org/Dataset](https://schema.org/Dataset)'|
+|@type|MUST|Text|MUST be '[schema.org/Dataset](https://schema.org/Dataset)'|
 |additionalType|MUST|Text or URL|‘Study’ or ontology term to identify it as a Study|
 |identifier|MUST|Text or URL|Identifying descriptor of the study.|
 |name|MUST|Text|A title of the study.|
-|about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this study.|
-|creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the study.|
+|about|SHOULD|[bioschemas.org/LabProcess](#labprocess)|The experimental processes performed in this study.|
+|creator|SHOULD|[schema.org/Person](#person)|The performer of the study.|
 |dateCreated|SHOULD|DateTime|When the Study was created|
 |datePublished|SHOULD|DateTime|When the Study was published|
 |description|SHOULD|Text|A short description of the study (e.g. an abstract).|
-|hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) (Assay) or [File](https://schema.org/MediaObject)|Assays contained in this study or actual data files resulting from the process sequence.|
-|citation|COULD|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|A publication corresponding to the study.|
-|comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
+|hasPart|SHOULD|[schema.org/Dataset](https://schema.org/Dataset) ([Assay](#assay)) or [File](https://schema.org/MediaObject)|Assays contained in this study or actual data files resulting from the process sequence.|
+|citation|COULD|[schema.org/ScholarlyArticle](#scholarlyarticle)|A publication corresponding to the study.|
+|comment|COULD|[schema.org/Comment](#comment)|Comment|
 |dateModified|COULD|DateTime|When the Study was last modified|
 |url|COULD|URL|The filename or path of the metadata file describing the study. Optional, since in some contexts like an ARC the filename is implicit.|
-
 
 ### Assay
 
@@ -126,20 +124,19 @@ Is based upon [schema.org/Dataset](https://schema.org/Dataset) and maps to the [
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL|Should be a subdirectory corresponding to this assay.|
-|@type|MUST|Text|must be '[schema.org/Dataset](https://schema.org/Dataset)'|
+|@type|MUST|Text|MUST be '[schema.org/Dataset](https://schema.org/Dataset)'|
 |additionalType|MUST|Text or URL|‘Assay’ or ontology term to identify it as an Assay|
 |identifier|MUST|Text or URL|Identifying descriptor of the assay.|
 |name|SHOULD|Text|A title of the assay.|
 |description|SHOULD|Text|A short description of the assay (e.g. an abstract).|
-|about|SHOULD|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|The experimental processes performed in this assay.|
-|creator|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer of the experiments.|
+|about|SHOULD|[bioschemas.org/LabProcess](#labprocess)|The experimental processes performed in this assay.|
+|creator|SHOULD|[schema.org/Person](#person)|The performer of the experiments.|
 |hasPart|SHOULD|[File](https://schema.org/MediaObject)|The data files resulting from the process sequence. MUST not be used to directly point to data fragments.|
-|measurementMethod|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type measurement e.g Complexomics or Transcriptomics as an ontology term|
-|measurementTechnique|SHOULD|URL or [schema.org/DefinedTerm](https://schema.org/DefinedTerm)|Describes the type of technology used to take the measurement, e.g mass spectrometry or deep sequencing|
-|comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
+|measurementMethod|SHOULD|URL or [schema.org/DefinedTerm](#definedterm)|Describes the type measurement e.g Complexomics or Transcriptomics as an ontology term|
+|measurementTechnique|SHOULD|URL or [schema.org/DefinedTerm](#definedterm)|Describes the type of technology used to take the measurement, e.g mass spectrometry or deep sequencing|
+|comment|COULD|[schema.org/Comment](#comment)|Comment|
 |url|COULD|URL|The filename or path of the metadata file describing the assay. Optional, since in some contexts like an ARC the filename is implicit.|
-|variableMeasured|COULD|Text or [schema.org/PropertyValue](https://schema.org/PropertyValue)|The target variable being measured E.g protein concentration|
-
+|variableMeasured|COULD|Text or [schema.org/PropertyValue](#propertyvalue)|The target variable being measured E.g protein concentration|
 
 ### LabProcess
 
@@ -147,17 +144,16 @@ Has the new Bioschemas DRAFT [bioschemas.org/LabProcess](https://bioschemas.org/
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
-|@type |MUST|Text|must be '[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)'|
+|@type |MUST|Text|MUST be '[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)'|
 |@id|MUST|Text or URL|Could identify the process using the isa metadata filename and the protocol reference or process name.|
 |name|MUST|Text| -|
-|object|SHOULD|[bioschemas.org/Sample](https://bioschemas.org/Sample) or [File](https://schema.org/MediaObject)|The input of the process. If there are multiple inputs, they SHOULD be stored as a sorted list to establish correspondence with outputs. (Both lists need the same length in that case.)|
-|result|SHOULD|[bioschemas.org/Sample](https://bioschemas.org/Sample) or [File](https://schema.org/MediaObject)|The output of the process. If there are multiple outputs, they SHOULD be stored as a sorted list to establish correspondence with inputs. (Both lists need the same length in that case.)|
-|agent|SHOULD|[schema.org/Person](https://schema.org/Person)|The performer|
+|object|SHOULD|[bioschemas.org/Sample](#sample) or [File](https://schema.org/MediaObject)|The input of the process. If there are multiple inputs, they SHOULD be stored as a sorted list to establish correspondence with outputs. (Both lists need the same length in that case.)|
+|result|SHOULD|[bioschemas.org/Sample](#sample) or [File](https://schema.org/MediaObject)|The output of the process. If there are multiple outputs, they SHOULD be stored as a sorted list to establish correspondence with inputs. (Both lists need the same length in that case.)|
+|agent|SHOULD|[schema.org/Person](#person)|The performer|
 |executesLabProtocol|SHOULD|[bioschemas.org/LabProtocol](https://bioschemas.org/LabProtocol)|The protocol executed|
-|parameterValue|SHOULD|[schema.org/PropertyValue](https://schema.org/PropertyValue)|A parameter value of the experimental process, usually a key-value pair using ontology terms|
+|parameterValue|SHOULD|[schema.org/PropertyValue](https://schema.org/PropertyValue) ([Parameter](#propertyvalue---parameter))|A parameter value of the experimental process, usually a key-value pair using ontology terms|
 |endTime|SHOULD|DateTime||
 |disambiguatingDescription|COULD|Text|Comments|
-
 
 ### LabProtocol
 
@@ -166,28 +162,28 @@ Is based on the Bioschemas [bioschemas.org/LabProtocol](https://bioschemas.org/L
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL|Could be the url pointing to the protocol resource.|
-|@type |MUST|Text|must be '[bioschemas.org/LabProtocol](https://bioschemas.org/LabProtocol)'|
+|@type |MUST|Text|MUST be '[bioschemas.org/LabProtocol](https://bioschemas.org/LabProtocol)'|
 |description|SHOULD|Text|A short description of the protocol (e.g. an abstract)|
-|intendedUse|SHOULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm) or Text or URL|The protocol type as an ontology term|
+|intendedUse|SHOULD|[schema.org/DefinedTerm](#definedterm) or Text or URL|The protocol type as an ontology term|
 |name|SHOULD|Text|Main title of the LabProtocol.|
-|comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
-|computationalTool|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm) or [schema.org/PropertyValue](https://schema.org/PropertyValue) or [schema.org/SoftwareApplication](https://schema.org/SoftwareApplication)|Software or tool used as part of the lab protocol to complete a part of it.|
-|labEquipment|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm) or [schema.org/PropertyValue](https://schema.org/PropertyValue) or Text or URL|For LabProtocols it would be a laboratory equipment use by a person to follow one or more steps described in this LabProtocol.|
-|reagent|COULD|[schema.org/BioChemEntity](https://schema.org/BioChemEntity://bioschemas.org/Sample) or [schema.org/DefinedTerm](https://schema.org/DefinedTerm) or [schema.org/PropertyValue](https://schema.org/PropertyValue) or Text or URL|Reagents used in the protocol.|
+|comment|COULD|[schema.org/Comment](#comment)|Comment|
+|computationalTool|COULD|[schema.org/DefinedTerm](#definedterm) or [schema.org/PropertyValue](https://schema.org/PropertyValue) ([Component](#propertyvalue---component)) or [schema.org/SoftwareApplication](https://schema.org/SoftwareApplication)|Software or tool used as part of the lab protocol to complete a part of it.|
+|labEquipment|COULD|[schema.org/DefinedTerm](#definedterm) or [schema.org/PropertyValue](https://schema.org/PropertyValue) ([Component](#propertyvalue---component)) or Text or URL|For LabProtocols it would be a laboratory equipment use by a person to follow one or more steps described in this LabProtocol.|
+|reagent|COULD|[schema.org/BioChemEntity](https://schema.org/BioChemEntity://bioschemas.org/Sample) or [schema.org/DefinedTerm](#definedterm) or [schema.org/PropertyValue](https://schema.org/PropertyValue) ([Component](#propertyvalue---component)) or Text or URL|Reagents used in the protocol.|
 |url|COULD|URL|Pointer to protocol resources external to the ISA-Tab that can be accessed by their Uniform Resource Identifier (URI).|
 |version|COULD|Number or Text|An identifier for the version to ensure protocol tracking.|
 
 ### Sample
 
-Is based on the Bioschemas [bioschemas.org/Sample](https://bioschemas.org/Sample) type, and represents the ISA-JSON [Sample](https://isa-specs.readthedocs.io/en/latest/isajson.html#sample-schema-json), 
+Is based on the Bioschemas [bioschemas.org/Sample](https://bioschemas.org/Sample) type, and represents the ISA-JSON [Sample](https://isa-specs.readthedocs.io/en/latest/isajson.html#sample-schema-json),
 [Source](https://isa-specs.readthedocs.io/en/latest/isajson.html#source-schema-json) and [Material](https://isa-specs.readthedocs.io/en/latest/isajson.html#material-schema-json)
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL|Could be the unique sample name.|
-|@type |MUST|Text|must be '[bioschemas.org/Sample](https://bioschemas.org/Sample)'|
+|@type |MUST|Text|MUST be '[bioschemas.org/Sample](https://bioschemas.org/Sample)'|
 |name|MUST|Text|A name identifying the sample.|
-|additionalProperty|SHOULD|[schema.org/PropertyValue](https://schema.org/PropertyValue)|characteristics or factors|
+|additionalProperty|SHOULD|[schema.org/PropertyValue](https://schema.org/PropertyValue) ([Characteristic](#propertyvalue---characteristic) or [Factor](#propertyvalue---factor))|characteristics or factors|
 
 ### Data
 
@@ -196,9 +192,9 @@ Describes and points to a Data file or a segment of a Data file (via [data fragm
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL|Should be the path pointing to the file|
-|@type |MUST|Text|must be 'File' or 'MediaObject'|
+|@type |MUST|Text|MUST be 'File' or 'MediaObject'|
 |name|MUST|Text or URL|The name of the file.|
-|comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
+|comment|COULD|[schema.org/Comment](#comment)|Comment|
 |disambiguatingDescription|COULD|Text|The type of the data file (“Raw Data File", “Derived Data File" or "Image File").|
 |encodingFormat|COULD|Text of URL|Media format as a MIME type|
 |hasPart|COULD|Text of URL|Data fragments of this Data object, described by [data fragment selectors](https://www.w3.org/TR/annotation-model/#fragment-selector). SHOULD not be used on data fragments.|
@@ -211,13 +207,13 @@ It is based on [schema.org/Person](https://schema.org/Person), and maps to the [
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL||
-|@type |MUST|Text|must be '[schema.org/Person](https://schema.org/Person)'|
+|@type |MUST|Text|MUST be '[schema.org/Person](https://schema.org/Person)'|
 |givenName|MUST|Text|Given name of a person. Can be used for any type of name.|
 |affiliation|SHOULD|[schema.org/Organization](https://schema.org/Organization)||
 |email|SHOULD|Text||
 |familyName|SHOULD|Text|Family name of a person.|
-|identifier|SHOULD|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this person, e.g. an ORCID. Can be of type PropertyValue to indicate the kind of reference.|
-|jobTitle|SHOULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)||
+|identifier|SHOULD|Text or URL or [schema.org/PropertyValue](#propertyvalue)|One or many identifiers for this person, e.g. an ORCID. Can be of type PropertyValue to indicate the kind of reference.|
+|jobTitle|SHOULD|[schema.org/DefinedTerm](#definedterm)||
 |additionalName|COULD|Text||
 |address|COULD|PostalAddress or Text||
 |disambiguatingDescription|COULD|Text||
@@ -231,12 +227,12 @@ It is based on [schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL||
-|@type |MUST|Text|must be '[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)'|
+|@type |MUST|Text|MUST be '[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)'|
 |headline|MUST|Text||
-|identifier|MUST|Text or URL or [schema.org/PropertyValue](https://schema.org/PropertyValue)|One or many identifiers for this article like a DOI or PubMedID. Can be of type PropertyValue to indicate the kind of reference (See details in Section on PropertyValue).|
-|author|SHOULD|[schema.org/Person](https://schema.org/Person)||
-|creativeWorkStatus|COULD|[schema.org/DefinedTerm](https://schema.org/DefinedTerm)|The status of the publication in terms of its stage in a lifecycle.|
-|comment|COULD|[schema.org/Comment](https://schema.org/Comment)|Comment|
+|identifier|MUST|Text or URL or [schema.org/PropertyValue](#propertyvalue)|One or many identifiers for this article like a DOI or PubMedID. Can be of type PropertyValue to indicate the kind of reference (See details in Section on PropertyValue).|
+|author|SHOULD|[schema.org/Person](#person)||
+|creativeWorkStatus|COULD|[schema.org/DefinedTerm](#definedterm)|The status of the publication in terms of its stage in a lifecycle.|
+|comment|COULD|[schema.org/Comment](#comment)|Comment|
 
 ### Comment
 
@@ -245,7 +241,7 @@ It is based on [schema.org/Comment](https://schema.org/Comment) and maps to the 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL||
-|@type |MUST|Text|must be '[schema.org/Comment](https://schema.org/Comment)'|
+|@type |MUST|Text|MUST be '[schema.org/Comment](https://schema.org/Comment)'|
 |name|SHOULD|Text||
 |text|SHOULD|Text||
 
@@ -256,7 +252,7 @@ It is based on [schema.org/DefinedTerm](https://schema.org/DefinedTerm) and maps
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL||
-|@type |MUST|Text|must be '[schema.org/DefinedTerm](https://schema.org/DefinedTerm)'|
+|@type |MUST|Text|MUST be '[schema.org/DefinedTerm](https://schema.org/DefinedTerm)'|
 |name|MUST|Text|The term name.|
 |termCode|SHOULD|Text|The identifier within the ontology.|
 |inDefinedTermSet|COULD|URL or [schema.org/DefinedTermSet](https://schema.org/DefinedTermSet)|Link to the ontology.|
@@ -269,7 +265,7 @@ General profile for key-value pairs. It is based on [schema.org/PropertyValue](h
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL||
-|@type |MUST|Text|must be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
+|@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
 |name|MUST|Text|Key name|
 |value|SHOULD|Text|Value text or number|
 |propertyID|SHOULD|URL|Key ontology reference|
@@ -285,7 +281,7 @@ Represents a process parameter. It is based on [schema.org/PropertyValue](https:
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL||
-|@type |MUST|Text|must be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
+|@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
 |name|MUST|Text|Key name|
 |additionalType|MUST|Text|MUST be `"ParameterValue"`|
 |value|SHOULD|Text|Value text or number|
@@ -301,7 +297,7 @@ Represents a characteristic. It is based on [schema.org/PropertyValue](https://s
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL||
-|@type |MUST|Text|must be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
+|@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
 |name|MUST|Text|Key name|
 |additionalType|MUST|Text|MUST be `"CharacteristicValue"`|
 |value|SHOULD|Text|Value text or number|
@@ -317,7 +313,7 @@ Represents a factor. It is based on [schema.org/PropertyValue](https://schema.or
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL||
-|@type |MUST|Text|must be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
+|@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
 |name|MUST|Text|Key name|
 |additionalType|MUST|Text|MUST be `"CharacteristicValue"`|
 |value|SHOULD|Text|Value text or number|
