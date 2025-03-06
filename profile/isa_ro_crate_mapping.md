@@ -7,35 +7,35 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |[Investigation](https://isa-specs.readthedocs.io/en/latest/isajson.html#investigation-schema-json)|[Dataset](https://schema.org/Dataset)||
 |@id|@id||
 |-|additionalType|for distinction from Study and Assay|
-|fileName|url||
-|title|name| RO-Crate requires a name for the root data entity. For the usecase of Google markup, we map the title to name, since the Google Dataset Search shows this property in the fashion of a title. |
-|people|creator||
 |identifier|identifier||
+|title|name| RO-Crate requires a name for the root data entity. For the usecase of Google markup, we map the title to name, since the Google Dataset Search shows this property in the fashion of a title. |
 |description|description||
-|studies|hasPart|In contrast to basic ISA, this property MAY also point to assays in addition to studies.|
-|submissionDate|dateCreated||
-|-|dateModified||
+|-|license|RO-Crate-specific property|
 |publicReleaseDate|datePublished||
+|people|creator||
+|submissionDate|dateCreated||
+|studies|hasPart|In contrast to basic ISA, this property MAY also point to assays in addition to studies.|
 |publications|citation||
 |comments|comment||
+|-|dateModified||
 |onntologySourceReferences|mentions||
-|-|license|RO-Crate-specific property|
+|fileName|url||
 ||
 |[Study](https://isa-specs.readthedocs.io/en/latest/isajson.html#study-schema-json)|[Dataset](https://schema.org/Dataset)||
 |@id|@id||
 |-|additionalType|for distinction from Investigation and Assay|
-|fileName|url||
-|people|creator||
 |identifier|identifier||
 |title|name| RO-Crate requires a name for the root data entity. For the usecase of Google markup, we map the title to name, since the Google Dataset Search shows this property in the fashion of a title. |
-|assays|hasPart||
 |processSequence|about||
-|description|description||
+|people|creator||
 |submissionDate|dateCreated||
-|-|dateModified||
 |publicReleaseDate|datePublished||
+|description|description||
+|assays|hasPart||
 |publications|citation||
 |comments|comment||
+|-|dateModified||
+|fileName|url||
 |studyDesignDescriptor|-|redundant information|
 |protocols|-|redundant information|
 |materials|-|redundant information|
@@ -51,37 +51,37 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |-|description|ISA-XLSX-specific property (Assay Description)|
 |processSequence|about||
 |-|creator|ISA-XLSX-specific property (Assay Performers)|
+|dataFiles|hasPart||
 |technologyType|measurementMethod||
 |technologyPlatform|measurementTechnique||
-|dataFiles|hasPart||
-|measurementType|variableMeasured||
 |comments|comment||
 |fileName|url||
+|measurementType|variableMeasured||
 ||
 |[Process](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-schema-json)|[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)|
 |@id|@id||
 |name|name||
-|performer|agent||
 |inputs|object||
 |outputs|result||
+|performer|agent||
 |executesProtocol|executesLabProtocol||
 |parameterValues|parameterValue||
 |date|endTime||
+|comments|disambiguatingDescription|For types without `comment` property, the ISA Comment object has to be encoded as a string of the following format containing (if present) `Name` and `Value`: `"Comment {Name = "MyKey", Value = "MyValue"}"`. Quotation must be escaped via standard json escape rules.|
 |previousProcess|-|redundant information|
 |nextProcess|-|redundant information|
-|comments|disambiguatingDescription||
 ||
 |[Protocol](https://isa-specs.readthedocs.io/en/latest/isajson.html#protocol-schema-json)|[bioschemas.org/LabProtocol](https://bioschemas.org/LabProtocol)|
 |@id|@id||
-|name|name||
-|protocolType|intendedUse||
 |description|description||
-|uri|url||
+|protocolType|intendedUse||
+|name|name||
 |comments|comment||
-|version|version||
+|components|computationalTool|Components can be saved as `labEquipment`, `reagent`, or `computationalTool`, with `labEquipment` being the default.|
 |components|labEquipment|Components can be saved as `labEquipment`, `reagent`, or `computationalTool`, with `labEquipment` being the default.|
 |components|reagent|Components can be saved as `labEquipment`, `reagent`, or `computationalTool`, with `labEquipment` being the default.|
-|components|computationalTool|Components can be saved as `labEquipment`, `reagent`, or `computationalTool`, with `labEquipment` being the default.|
+|uri|url||
+|version|version||
 |parameters|-|redundant information|
 ||
 |[Sample](https://isa-specs.readthedocs.io/en/latest/isajson.html#sample-schema-json)|[bioschemas.org/Sample](https://bioschemas.org/Sample)||
@@ -96,24 +96,24 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |@id|@id||
 |name|name||
 |comments|comment||
-|-|encodingFormat|ISA-XLSX-specific property (Data Format)|
 |type|disambiguatingDescription||
+|-|encodingFormat|ISA-XLSX-specific property (Data Format)|
 |-|hasPart|ISA-RO-Crate-specific property|
 |-|usageInfo|ISA-XLSX-specific property (Data Selector Format)|
 ||
 |[Person](https://isa-specs.readthedocs.io/en/latest/isajson.html#person-schema-json)|[schema.org/Person](https://schema.org/Person)|
 |@id|@id||
 |firstName|givenName||
-|lastName|familyName||
-|email|email||
-|-|identifier|Can be used for identifiers stored in comment, e.g. an orcid.|
 |affiliation|affiliation|The affilitation strin in ISA is converted to an Oranization object.|
+|email|email||
+|lastName|familyName||
+|-|identifier|Can be used for identifiers stored in comment, e.g. an orcid.|
 |roles|jobTitle||
 |midInitials|additionalName||
 |address|address||
-|phone|telephone||
+|comments|disambiguatingDescription|For types without `comment` property, the ISA Comment object has to be encoded as a string of the following format containing (if present) `Name` and `Value`: `"Comment {Name = "MyKey", Value = "MyValue"}"`. Quotation must be escaped via standard json escape rules.|
 |fax|faxNumber||
-|comments|disambiguatingDescription|Comment object in ISA has to be encoded as a string.|
+|phone|telephone||
 ||
 |[Publication](https://isa-specs.readthedocs.io/en/latest/isajson.html#publication-schema-json)|[schema.org/ScholarlyArticle](https://schema.org/ScholarlyArticle)|
 |@id|@id||
@@ -130,10 +130,11 @@ This is the mapping between ISA-json types defined in https://isa-specs.readthed
 |value|text||
 ||
 |[OntologyAnnotation](https://isa-specs.readthedocs.io/en/latest/isajson.html#ontology-annotation-schema-json)|[DefinedTerm](https://schema.org/DefinedTerm)||
+|@id|@id||
 |annotationValue|name||
-|termSource|inDefinedTermSet||
 |termAccession|termCode||
-|comments|disambiguatingDescription|Comment object in ISA has to be encoded as a string.|
+|termSource|inDefinedTermSet||
+|comments|disambiguatingDescription|For types without `comment` property, the ISA Comment object has to be encoded as a string of the following format containing (if present) `Name` and `Value`: `"Comment {Name = "MyKey", Value = "MyValue"}"`. Quotation must be escaped via standard json escape rules.|
 ||
 |[FactorValue](https://isa-specs.readthedocs.io/en/latest/isajson.html#factor-value-schema-json)|[schema.org/PropertyValue](https://schema.org/PropertyValue)|See details for properties [below](#key-value-unit-triples).|
 |[MaterialAttributeValue](https://isa-specs.readthedocs.io/en/latest/isajson.html#material-attribute-value-schema-json)|[schema.org/PropertyValue](https://schema.org/PropertyValue)|See details for properties [below](#key-value-unit-triples).|
@@ -160,9 +161,9 @@ The unit is again an ontology term that has to be resolved into a URL and a name
 |[ProcessParameterValue](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-parameter-value-schema-json)|[schema.org/PropertyValue](https://schema.org/PropertyValue)||
 |@id|@id||
 |category|name|Name of the category.|
+|-|additionalType|MUST be used to describe if the value is a factor, characteristic or parameter by using one of the following string values: "FactorValue", "CharacteristicValue", or "ParameterValue"|
 |value|value|Value as number or string.|
 |category|propertyID|Ontology URL of the category.|
 |unit|unitCode|Ontology URL of the unit.|
 |unit|unitText|Name of the unit.|
-|value|valueReference|Ontology URL or ontology term objetc of the value.|
-|-|additionalType||Can be used to describe if the value is a factor, characteristic or parameter.|
+|value|valueReference|Ontology URL or ontology term object of the value.|
