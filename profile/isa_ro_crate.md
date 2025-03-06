@@ -9,12 +9,34 @@
   * Sebastian Beier - https://orcid.org/0000-0002-2177-8781
   * Stuart Owen - https://orcid.org/0000-0003-2130-0865
   * Timo Muehlhaus - https://orcid.org/0000-0003-3925-6778
+* **Table of contents**
+  * [Overview](#overview)
+  * [Requirements](#requirements)
+    * [Investigation](#investigation)
+    * [Study](#study)
+    * [Assay](#assay)
+    * [LabProcess](#labprocess)
+    * [LabProtocol](#labprotocol)
+    * [Sample](#sample)
+    * [Data](#data)
+    * [Person](#person)
+    * [ScholarlyArticle](#scholarlyarticle)
+    * [Comment](#comment)
+    * [DefinedTerm](#definedterm)
+    * [PropertyValue](#propertyvalue)
+      * [PropertyValue - Parameter](#propertyvalue---parameter)
+      * [PropertyValue - Characteristic](#propertyvalue---characteristic)
+      * [PropertyValue - Factor](#propertyvalue---factor)
+      * [PropertyValue - Component](#propertyvalue---component)
+      * [PropertyValue - DOI](#propertyvalue---doi)
+      * [PropertyValue - PubMedID](#propertyvalue---pubmedid)
+  * [Example ro-crate-metadata.json](#example-ro-crate-metadatajson)
 
 ## Overview
 
 A significant part of the previous work on this [RO-Crate](https://www.researchobject.org/ro-crate/) profile for [ISA](https://isa-tools.org/index.html) was produced as part of the [Annotated Research Context (ARC)](https://nfdi4plants.org/content/learn-more/annotated-research-context.html) project, through [arc-to-rocrate](https://github.com/nfdi4plants/arc-to-rocrate).
 
-During the [ELIXIR Biohackathon 2023](https://biohackathon-europe.org/), as part of [Project 14: Enabling continuous RDM using Annotated Research Contexts with RO-Crate profiles for ISA](https://github.com/elixir-europe/biohackathon-projects-2023/tree/main/14), 
+During the [ELIXIR Biohackathon 2023](https://biohackathon-europe.org/), as part of [Project 14: Enabling continuous RDM using Annotated Research Contexts with RO-Crate profiles for ISA](https://github.com/elixir-europe/biohackathon-projects-2023/tree/main/14),
 the profile was further fine tuned and defined, and some remaining unresolved mappings resolved.
 
 The aim of the profile is to be able to fully represent [ISA-JSON](https://isa-specs.readthedocs.io/en/latest/isajson.html) as RO-Crate, fully capturing the metadata and files in a non-lossy form such that it
