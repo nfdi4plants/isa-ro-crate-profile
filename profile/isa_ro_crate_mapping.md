@@ -161,9 +161,9 @@ The unit is again an ontology term that has to be resolved into a URL and a name
 |[ProcessParameterValue](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-parameter-value-schema-json)|[schema.org/PropertyValue](https://schema.org/PropertyValue)||
 |@id|@id||
 |category|name|Name of the category.|
+|-|additionalType|MUST be used to describe if the value is a factor, characteristic or parameter by using one of the following string values: "FactorValue", "CharacteristicValue", or "ParameterValue"|
 |value|value|Value as number or string.|
 |category|propertyID|Ontology URL of the category.|
 |unit|unitCode|Ontology URL of the unit.|
 |unit|unitText|Name of the unit.|
 |value|valueReference|Ontology URL or ontology term objetc of the value.|
-|-|additionalType|SHOULD be used to describe if the value is a factor, characteristic or parameter by using one of the following string values: "FactorValue", "CharacteristicValue", or "ParameterValue"|
