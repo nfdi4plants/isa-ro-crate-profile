@@ -166,4 +166,4 @@ The unit is again an ontology term that has to be resolved into a URL and a name
 |category|propertyID|Ontology URL of the category.|
 |unit|unitCode|Ontology URL of the unit.|
 |unit|unitText|Name of the unit.|
-|value|valueReference|Ontology URL or ontology term objetc of the value.|
+|value|valueReference|Ontology URL or ontology term object of the value.|

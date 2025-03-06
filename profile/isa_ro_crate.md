@@ -144,8 +144,8 @@ Has the new Bioschemas DRAFT [bioschemas.org/LabProcess](https://bioschemas.org/
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
-|@type |MUST|Text|MUST be '[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)'|
 |@id|MUST|Text or URL|Could identify the process using the isa metadata filename and the protocol reference or process name.|
+|@type |MUST|Text|MUST be '[bioschemas.org/LabProcess](https://bioschemas.org/LabProcess)'|
 |name|MUST|Text| -|
 |object|SHOULD|[bioschemas.org/Sample](#sample) or [File](https://schema.org/MediaObject)|The input of the process. If there are multiple inputs, they SHOULD be stored as a sorted list to establish correspondence with outputs. (Both lists need the same length in that case.)|
 |result|SHOULD|[bioschemas.org/Sample](#sample) or [File](https://schema.org/MediaObject)|The output of the process. If there are multiple outputs, they SHOULD be stored as a sorted list to establish correspondence with inputs. (Both lists need the same length in that case.)|
