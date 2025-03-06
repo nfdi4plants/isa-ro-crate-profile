@@ -274,9 +274,9 @@ General profile for key-value pairs. It is based on [schema.org/PropertyValue](h
 |unitText|COULD|Text|Unit name|
 |valueReference|COULD|URL|Value ontology reference|
 
-### PropertyValue - Parameter
+#### PropertyValue - Parameter
 
-Represents a process parameter. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the ISA-JSON Key-Value-Unit Triples [Process Parameter Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-parameter-value-schema-json)
+Represents a process parameter. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the ISA-JSON Key-Value-Unit Triples [Process Parameter Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#process-parameter-value-schema-json).
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -290,25 +290,9 @@ Represents a process parameter. It is based on [schema.org/PropertyValue](https:
 |unitText|COULD|Text|Unit name|
 |valueReference|COULD|URL|Value ontology reference|
 
-### PropertyValue - Characteristic
+#### PropertyValue - Characteristic
 
-Represents a characteristic. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the ISA-JSON Key-Value-Unit Triple [Material Attribute Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#material-attribute-value-schema-json)
-
-| Property | Required | Expected Type | Description |
-|----------|----------|---------------|-------------|
-|@id|MUST|Text or URL||
-|@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
-|name|MUST|Text|Key name|
-|additionalType|MUST|Text|MUST be `"CharacteristicValue"`|
-|value|SHOULD|Text|Value text or number|
-|propertyID|SHOULD|URL|Key ontology reference|
-|unitCode|COULD|URL|Unit ontology reference|
-|unitText|COULD|Text|Unit name|
-|valueReference|COULD|URL|Value ontology reference|
-
-### PropertyValue - Factor
-
-Represents a factor. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the ISA-JSON Key-Value-Unit Triple [Factor Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#factor-value-schema-json)
+Represents a characteristic. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the ISA-JSON Key-Value-Unit Triple [Material Attribute Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#material-attribute-value-schema-json).
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
@@ -322,18 +306,34 @@ Represents a factor. It is based on [schema.org/PropertyValue](https://schema.or
 |unitText|COULD|Text|Unit name|
 |valueReference|COULD|URL|Value ontology reference|
 
-### PropertyValue - Component
+#### PropertyValue - Factor
 
-Represents a protocol component. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the a component of an [ISA-JSON protocol](https://isa-specs.readthedocs.io/en/latest/isajson.html#protocol-schema-json)
+Represents a factor. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the ISA-JSON Key-Value-Unit Triple [Factor Value](https://isa-specs.readthedocs.io/en/latest/isajson.html#factor-value-schema-json).
 
 | Property | Required | Expected Type | Description |
 |----------|----------|---------------|-------------|
 |@id|MUST|Text or URL||
 |@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
 |name|MUST|Text|Key name|
+|additionalType|MUST|Text|MUST be `"FactorValue"`|
 |value|SHOULD|Text|Value text or number|
 |propertyID|SHOULD|URL|Key ontology reference|
-|additionalType|SHOULD|Text|MUST be `"Component"`|
+|unitCode|COULD|URL|Unit ontology reference|
+|unitText|COULD|Text|Unit name|
+|valueReference|COULD|URL|Value ontology reference|
+
+#### PropertyValue - Component
+
+Represents a protocol component. It is based on [schema.org/PropertyValue](https://schema.org/PropertyValue) and maps to the a component of an [ISA-JSON protocol](https://isa-specs.readthedocs.io/en/latest/isajson.html#protocol-schema-json).
+
+| Property | Required | Expected Type | Description |
+|----------|----------|---------------|-------------|
+|@id|MUST|Text or URL||
+|@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
+|name|MUST|Text|Key name|
+|additionalType|MUST|Text|MUST be `"Component"`|
+|value|SHOULD|Text|Value text or number|
+|propertyID|SHOULD|URL|Key ontology reference|
 |valueReference|COULD|URL|Value ontology reference|
 
 #### PropertyValue - DOI
@@ -355,7 +355,6 @@ If a [schema.org/PropertyValue](https://schema.org/PropertyValue) object represe
 |name|MUST|'PubMedID'||
 |value|SHOULD|-|The PubMedID|
 |propertyID|MUST|'http://purl.obolibrary.org/obo/OBI_0001617'|Ontology term describing a PubMedID|
-
 
 ## Example ro-crate-metadata.json
 
