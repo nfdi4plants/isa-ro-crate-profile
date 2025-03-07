@@ -1,6 +1,6 @@
 # ISA RO-Crate Profile
 
-* Version: 0.2
+* Version: 1.0.0-draft.1
 * Permalink: _coming soon_
 * Authors
   * Florian Wetzels - https://orcid.org/0000-0002-5526-7138
