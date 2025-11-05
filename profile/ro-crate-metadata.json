@@ -1,0 +1,82 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.2-DRAFT/context",
+  "@graph": [
+    {
+      "@id": "https://mit-license.org/",
+      "@type": "CreativeWork",
+      "name": "MIT License"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-5526-71389",
+      "@type": "Person",
+      "name": "Florian Wetzels"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-1945-6342",
+      "@type": "Person",
+      "name": "Heinrich Lukas Weil"
+    },
+    {
+      "@id": "isa_ro_crate.md",
+      "@type": "File",
+      "name": "ISA RO-Crate Profile description",
+      "encodingFormat": "text/markdown",
+      "about": {
+        "@id": "https://github.com/nfdi4plants/isa-ro-crate-profile/tree/1.0.0-draft.2/profile"
+      }
+    },
+    {
+      "@id": "https://schema.org/Dataset",
+      "@type": "DefinedTerm",
+      "name": "Dataset"
+    },
+    {
+      "@id": "https://bioschemas.org/types/LabProcess/0.1-DRAFT",
+      "@type": "DefinedTerm",
+      "name": "LabProcess"
+    },
+    {
+      "@id": "https://github.com/nfdi4plants/isa-ro-crate-profile/tree/1.0.0-draft.2/profile",
+      "@type": [
+        "Dataset",
+        "Profile"
+      ],
+      "license": {
+        "@id": "https://mit-license.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-5526-71389"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-1945-6342"
+        }
+      ],
+      "name": "ISA RO-Crate Profile",
+      "description": "An RO-Crate profile for representing ISA data in Research Object Crates (RO-Crates). This profile defines how to represent ISA Investigation, Study, and Assay data using RO-Crate metadata.",
+      "version": "1.0.0-draft.2",
+      "hasPart": [
+        {
+          "@id": "isa_ro_crate.md"
+        },
+        {
+          "@id": "https://schema.org/Dataset"
+        },
+        {
+          "@id": "https://bioschemas.org/types/LabProcess/0.1-DRAFT"
+        }
+      ]
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "license": {
+        "@id": "https://mit-license.org/"
+      },
+      "about": {
+        "@id": "https://github.com/nfdi4plants/isa-ro-crate-profile/tree/1.0.0-draft.2/profile"
+      },
+      "conformsTo": "https://w3id.org/ro/crate/1.2"
+    }
+  ]
+}
