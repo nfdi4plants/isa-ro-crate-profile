@@ -17,6 +17,16 @@
       "name": "Heinrich Lukas Weil"
     },
     {
+      "@id": "https://orcid.org/0000-0002-2198-5262",
+      "@type": "Person",
+      "name": "Kevin Schneider"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-2130-0865",
+      "@type": "Person",
+      "name": "Stuart Owen"
+    },
+    {
       "@id": "isa_ro_crate.md",
       "@type": "File",
       "name": "ISA RO-Crate Profile description",
@@ -36,6 +46,113 @@
       "name": "LabProcess"
     },
     {
+      "@id": "https://bioschemas.org/types/LabProtocol/0.5-DRAFT",
+      "@type": "DefinedTerm",
+      "name": "LabProtocol"
+    },
+    {
+      "@id": "https://schema.org/PropertyValue",
+      "@type": "DefinedTerm",
+      "name": "PropertyValue"
+    },
+    {
+      "@id": "https://schema.org/DefinedTerm",
+      "@type": "DefinedTerm",
+      "name": "DefinedTerm"
+    },
+    {
+      "@id": "https://schema.org/Person",
+      "@type": "DefinedTerm",
+      "name": "Person"
+    },
+    {
+      "@id": "https://schema.org/ScholarlyArticle",
+      "@type": "DefinedTerm",
+      "name": "ScholarlyArticle"
+    },
+    {
+      "@id": "https://schema.org/Comment",
+      "@type": "DefinedTerm",
+      "name": "Comment"
+    },
+    {
+      "@id": "https://schema.org/MediaObject",
+      "@type": "DefinedTerm",
+      "name": "MediaObject"
+    },
+    {
+      "@id": "https://bioschemas.org/types/Sample/0.3-DRAFT",
+      "@type": "DefinedTerm",
+      "name": "Sample"
+    },
+    {
+      "@id": "https://schema.org/Organization",
+      "@type": "DefinedTerm",
+      "name": "Organization"
+    },
+    {
+      "@id": "isa_ro_crate_mapping.md",
+      "@type": "File",
+      "name": "ISA RO-Crate ISA Tab/Json mapping guidance",
+      "encodingFormat": "text/markdown",
+      "about": {
+        "@id": "https://github.com/nfdi4plants/isa-ro-crate-profile/tree/1.0.0-draft.2/profile"
+      }
+    },
+    {
+      "@id": "https://arc-rdm.org/details/documentation-principle/",
+      "@type": "File",
+      "name": "ISA RO-Crate Annotation Modelling guidance",
+      "encodingFormat": "text/html",
+      "about": {
+        "@id": "https://github.com/nfdi4plants/isa-ro-crate-profile/tree/1.0.0-draft.2/profile"
+      }
+    },
+    {
+      "@id": "https://git.nfdi4plants.org/venn/Ru_ChlamyHeatstress/-/package_files/35699/download",
+      "@type": "File",
+      "name": "ISA RO-Crate Example",
+      "encodingFormat": "application/json",
+      "about": {
+        "@id": "https://github.com/nfdi4plants/isa-ro-crate-profile/tree/1.0.0-draft.2/profile"
+      }
+    },
+    {
+      "@id": "#hasSpecification",
+      "@type": "ResourceDescriptor",
+      "hasRole": {
+        "@id": "http://www.w3.org/ns/dx/prof/role/specification"
+      },
+      "hasArtifact": {
+        "@id": "isa_ro_crate.md"
+      }
+    },
+    {
+      "@id": "#hasGuidance",
+      "@type": "ResourceDescriptor",
+      "hasRole": {
+        "@id": "http://www.w3.org/ns/dx/prof/role/guidance"
+      },
+      "hasArtifact": [
+        {
+          "@id": "isa_ro_crate_mapping.md"
+        },
+        {
+          "@id": "https://arc-rdm.org/details/documentation-principle/"
+        }
+      ]
+    },
+    {
+      "@id": "#hasExample",
+      "@type": "ResourceDescriptor",
+      "hasRole": {
+        "@id": "http://www.w3.org/ns/dx/prof/role/example"
+      },
+      "hasArtifact": {
+        "@id": "https://git.nfdi4plants.org/venn/Ru_ChlamyHeatstress/-/package_files/35699/download"
+      }
+    },
+    {
       "@id": "https://github.com/nfdi4plants/isa-ro-crate-profile/tree/1.0.0-draft.2/profile",
       "@type": [
         "Dataset",
@@ -44,17 +161,22 @@
       "license": {
         "@id": "https://mit-license.org/"
       },
+      "name": "ISA RO-Crate Profile",
+      "description": "An RO-Crate profile for representing ISA (Investigation, Study, and Assay) in Research Object Crates (RO-Crates).",
       "author": [
         {
           "@id": "https://orcid.org/0000-0002-5526-71389"
         },
         {
           "@id": "https://orcid.org/0000-0003-1945-6342"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-2198-5262"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-2130-0865"
         }
       ],
-      "name": "ISA RO-Crate Profile",
-      "description": "An RO-Crate profile for representing ISA data in Research Object Crates (RO-Crates). This profile defines how to represent ISA Investigation, Study, and Assay data using RO-Crate metadata.",
-      "version": "1.0.0-draft.2",
       "hasPart": [
         {
           "@id": "isa_ro_crate.md"
@@ -64,17 +186,163 @@
         },
         {
           "@id": "https://bioschemas.org/types/LabProcess/0.1-DRAFT"
+        },
+        {
+          "@id": "https://bioschemas.org/types/LabProtocol/0.5-DRAFT"
+        },
+        {
+          "@id": "https://schema.org/PropertyValue"
+        },
+        {
+          "@id": "https://schema.org/DefinedTerm"
+        },
+        {
+          "@id": "https://schema.org/Person"
+        },
+        {
+          "@id": "https://schema.org/ScholarlyArticle"
+        },
+        {
+          "@id": "https://schema.org/Comment"
+        },
+        {
+          "@id": "https://schema.org/MediaObject"
+        },
+        {
+          "@id": "https://bioschemas.org/types/Sample/0.3-DRAFT"
+        },
+        {
+          "@id": "https://schema.org/Organization"
+        },
+        {
+          "@id": "isa_ro_crate_mapping.md"
+        },
+        {
+          "@id": "https://schema.org/Dataset"
+        },
+        {
+          "@id": "https://bioschemas.org/types/LabProcess/0.1-DRAFT"
+        },
+        {
+          "@id": "https://bioschemas.org/types/LabProtocol/0.5-DRAFT"
+        },
+        {
+          "@id": "https://schema.org/PropertyValue"
+        },
+        {
+          "@id": "https://schema.org/DefinedTerm"
+        },
+        {
+          "@id": "https://schema.org/Person"
+        },
+        {
+          "@id": "https://schema.org/ScholarlyArticle"
+        },
+        {
+          "@id": "https://schema.org/Comment"
+        },
+        {
+          "@id": "https://schema.org/MediaObject"
+        },
+        {
+          "@id": "https://bioschemas.org/types/Sample/0.3-DRAFT"
+        },
+        {
+          "@id": "https://schema.org/Organization"
+        },
+        {
+          "@id": "https://arc-rdm.org/details/documentation-principle/"
+        },
+        {
+          "@id": "https://schema.org/Dataset"
+        },
+        {
+          "@id": "https://bioschemas.org/types/LabProcess/0.1-DRAFT"
+        },
+        {
+          "@id": "https://bioschemas.org/types/LabProtocol/0.5-DRAFT"
+        },
+        {
+          "@id": "https://schema.org/PropertyValue"
+        },
+        {
+          "@id": "https://schema.org/DefinedTerm"
+        },
+        {
+          "@id": "https://schema.org/Person"
+        },
+        {
+          "@id": "https://schema.org/ScholarlyArticle"
+        },
+        {
+          "@id": "https://schema.org/Comment"
+        },
+        {
+          "@id": "https://schema.org/MediaObject"
+        },
+        {
+          "@id": "https://bioschemas.org/types/Sample/0.3-DRAFT"
+        },
+        {
+          "@id": "https://schema.org/Organization"
+        },
+        {
+          "@id": "https://git.nfdi4plants.org/venn/Ru_ChlamyHeatstress/-/package_files/35699/download"
+        },
+        {
+          "@id": "https://schema.org/Dataset"
+        },
+        {
+          "@id": "https://bioschemas.org/types/LabProcess/0.1-DRAFT"
+        },
+        {
+          "@id": "https://bioschemas.org/types/LabProtocol/0.5-DRAFT"
+        },
+        {
+          "@id": "https://schema.org/PropertyValue"
+        },
+        {
+          "@id": "https://schema.org/DefinedTerm"
+        },
+        {
+          "@id": "https://schema.org/Person"
+        },
+        {
+          "@id": "https://schema.org/ScholarlyArticle"
+        },
+        {
+          "@id": "https://schema.org/Comment"
+        },
+        {
+          "@id": "https://schema.org/MediaObject"
+        },
+        {
+          "@id": "https://bioschemas.org/types/Sample/0.3-DRAFT"
+        },
+        {
+          "@id": "https://schema.org/Organization"
+        }
+      ],
+      "hasResource": [
+        {
+          "@id": "#hasSpecification"
+        },
+        {
+          "@id": "#hasGuidance"
+        },
+        {
+          "@id": "#hasExample"
         }
       ]
     },
     {
       "@id": "ro-crate-metadata.json",
       "@type": "CreativeWork",
-      "license": {
-        "@id": "https://mit-license.org/"
-      },
       "about": {
         "@id": "https://github.com/nfdi4plants/isa-ro-crate-profile/tree/1.0.0-draft.2/profile"
+      },
+      "license": {
+        "@id": "https://mit-license.org/"
       },
       "conformsTo": "https://w3id.org/ro/crate/1.2"
     }
