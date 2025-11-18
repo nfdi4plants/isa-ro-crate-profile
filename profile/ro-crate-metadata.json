@@ -162,7 +162,7 @@
         "@id": "https://mit-license.org/"
       },
       "name": "ISA RO-Crate Profile",
-      "description": "An RO-Crate profile for representing ISA (Investigation, Study, and Assay) in Research Object Crates (RO-Crates).",
+      "description": "An RO-Crate profile for representing the ISA (Investigation, Study, and Assay) metadata framework in Research Object Crates (RO-Crates).",
       "author": [
         {
           "@id": "https://orcid.org/0000-0002-5526-71389"
