@@ -1,5 +1,5 @@
 {
-  "@context": "https://w3id.org/ro/crate/1.2-DRAFT/context",
+  "@context": "https://w3id.org/ro/crate/1.2/context",
   "@graph": [
     {
       "@id": "https://mit-license.org/",
@@ -7,24 +7,48 @@
       "name": "MIT License"
     },
     {
+      "@id": "https://rptu.de/",
+      "@type": "Organization",
+      "name": "RPTU Kaiserslautern-Landau",
+      "url": "https://rptu.de/"
+    },
+    {
       "@id": "https://orcid.org/0000-0002-5526-71389",
       "@type": "Person",
-      "name": "Florian Wetzels"
+      "name": "Florian Wetzels",
+      "affiliation": {
+        "@id": "https://rptu.de/"
+      }
     },
     {
       "@id": "https://orcid.org/0000-0003-1945-6342",
       "@type": "Person",
-      "name": "Heinrich Lukas Weil"
+      "name": "Heinrich Lukas Weil",
+      "affiliation": {
+        "@id": "https://rptu.de/"
+      }
     },
     {
       "@id": "https://orcid.org/0000-0002-2198-5262",
       "@type": "Person",
-      "name": "Kevin Schneider"
+      "name": "Kevin Schneider",
+      "affiliation": {
+        "@id": "https://rptu.de/"
+      }
+    },
+    {
+      "@id": "https://www.manchester.ac.uk/",
+      "@type": "Organization",
+      "name": "The University of Manchester",
+      "url": "https://www.manchester.ac.uk/"
     },
     {
       "@id": "https://orcid.org/0000-0003-2130-0865",
       "@type": "Person",
-      "name": "Stuart Owen"
+      "name": "Stuart Owen",
+      "affiliation": {
+        "@id": "https://www.manchester.ac.uk/"
+      }
     },
     {
       "@id": "isa_ro_crate.md",
@@ -43,12 +67,14 @@
     {
       "@id": "https://bioschemas.org/types/LabProcess/0.1-DRAFT",
       "@type": "DefinedTerm",
-      "name": "LabProcess"
+      "name": "LabProcess",
+      "termCode": "LabProcess"
     },
     {
       "@id": "https://bioschemas.org/types/LabProtocol/0.5-DRAFT",
       "@type": "DefinedTerm",
-      "name": "LabProtocol"
+      "name": "LabProtocol",
+      "termCode": "LabProtocol"
     },
     {
       "@id": "https://schema.org/PropertyValue",
@@ -83,7 +109,8 @@
     {
       "@id": "https://bioschemas.org/types/Sample/0.3-DRAFT",
       "@type": "DefinedTerm",
-      "name": "Sample"
+      "name": "Sample",
+      "termCode": "Sample"
     },
     {
       "@id": "https://schema.org/Organization",
@@ -153,6 +180,13 @@
       }
     },
     {
+      "@id": "https://nfdi4plants.de/",
+      "@type": "Organization",
+      "name": "DataPLANT",
+      "url": "https://nfdi4plants.de/",
+      "alternateName": "NFDI4Plants"
+    },
+    {
       "@id": "https://github.com/nfdi4plants/isa-ro-crate-profile/tree/1.0.0-draft.2/profile",
       "@type": [
         "Dataset",
@@ -177,6 +211,22 @@
           "@id": "https://orcid.org/0000-0003-2130-0865"
         }
       ],
+      "keywords": [
+        "RO-Crate",
+        "Research Object Crate",
+        "ISA",
+        "Investigation",
+        "Study",
+        "Assay",
+        "Process",
+        "Metadata Standard",
+        "Bioschemas",
+        "FAIR Data",
+        "ARC",
+        "Annotated Research Context",
+        "Data Management"
+      ],
+      "version": "1.0.0-draft.2",
       "hasPart": [
         {
           "@id": "isa_ro_crate.md"
@@ -218,109 +268,10 @@
           "@id": "isa_ro_crate_mapping.md"
         },
         {
-          "@id": "https://schema.org/Dataset"
-        },
-        {
-          "@id": "https://bioschemas.org/types/LabProcess/0.1-DRAFT"
-        },
-        {
-          "@id": "https://bioschemas.org/types/LabProtocol/0.5-DRAFT"
-        },
-        {
-          "@id": "https://schema.org/PropertyValue"
-        },
-        {
-          "@id": "https://schema.org/DefinedTerm"
-        },
-        {
-          "@id": "https://schema.org/Person"
-        },
-        {
-          "@id": "https://schema.org/ScholarlyArticle"
-        },
-        {
-          "@id": "https://schema.org/Comment"
-        },
-        {
-          "@id": "https://schema.org/MediaObject"
-        },
-        {
-          "@id": "https://bioschemas.org/types/Sample/0.3-DRAFT"
-        },
-        {
-          "@id": "https://schema.org/Organization"
-        },
-        {
           "@id": "https://arc-rdm.org/details/documentation-principle/"
         },
         {
-          "@id": "https://schema.org/Dataset"
-        },
-        {
-          "@id": "https://bioschemas.org/types/LabProcess/0.1-DRAFT"
-        },
-        {
-          "@id": "https://bioschemas.org/types/LabProtocol/0.5-DRAFT"
-        },
-        {
-          "@id": "https://schema.org/PropertyValue"
-        },
-        {
-          "@id": "https://schema.org/DefinedTerm"
-        },
-        {
-          "@id": "https://schema.org/Person"
-        },
-        {
-          "@id": "https://schema.org/ScholarlyArticle"
-        },
-        {
-          "@id": "https://schema.org/Comment"
-        },
-        {
-          "@id": "https://schema.org/MediaObject"
-        },
-        {
-          "@id": "https://bioschemas.org/types/Sample/0.3-DRAFT"
-        },
-        {
-          "@id": "https://schema.org/Organization"
-        },
-        {
           "@id": "https://git.nfdi4plants.org/venn/Ru_ChlamyHeatstress/-/package_files/35699/download"
-        },
-        {
-          "@id": "https://schema.org/Dataset"
-        },
-        {
-          "@id": "https://bioschemas.org/types/LabProcess/0.1-DRAFT"
-        },
-        {
-          "@id": "https://bioschemas.org/types/LabProtocol/0.5-DRAFT"
-        },
-        {
-          "@id": "https://schema.org/PropertyValue"
-        },
-        {
-          "@id": "https://schema.org/DefinedTerm"
-        },
-        {
-          "@id": "https://schema.org/Person"
-        },
-        {
-          "@id": "https://schema.org/ScholarlyArticle"
-        },
-        {
-          "@id": "https://schema.org/Comment"
-        },
-        {
-          "@id": "https://schema.org/MediaObject"
-        },
-        {
-          "@id": "https://bioschemas.org/types/Sample/0.3-DRAFT"
-        },
-        {
-          "@id": "https://schema.org/Organization"
         }
       ],
       "hasResource": [
@@ -333,7 +284,12 @@
         {
           "@id": "#hasExample"
         }
-      ]
+      ],
+      "datePublished": "2025-11-26T15:39:18.0220345Z",
+      "publisher": {
+        "@id": "https://nfdi4plants.de/"
+      },
+      "isProfileOf": "https://w3id.org/ro/crate/1.2"
     },
     {
       "@id": "ro-crate-metadata.json",

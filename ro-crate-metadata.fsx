@@ -8,24 +8,39 @@ open ROCratePCC
 
 let types = ResizeArray [
     UsedType(iri = "https://schema.org/Dataset", name = "Dataset");
-    UsedType(iri = "https://bioschemas.org/types/LabProcess/0.1-DRAFT", name = "LabProcess");
-    UsedType(iri = "https://bioschemas.org/types/LabProtocol/0.5-DRAFT", name = "LabProtocol"); 
+    UsedType(iri = "https://bioschemas.org/types/LabProcess/0.1-DRAFT", name = "LabProcess", termCode = "LabProcess");
+    UsedType(iri = "https://bioschemas.org/types/LabProtocol/0.5-DRAFT", name = "LabProtocol", termCode = "LabProtocol"); 
     UsedType(iri = "https://schema.org/PropertyValue", name = "PropertyValue");
     UsedType(iri = "https://schema.org/DefinedTerm", name = "DefinedTerm");
     UsedType(iri = "https://schema.org/Person", name = "Person");
     UsedType(iri = "https://schema.org/ScholarlyArticle", name = "ScholarlyArticle");
     UsedType(iri = "https://schema.org/Comment", name = "Comment");
     UsedType(iri = "https://schema.org/MediaObject", name = "MediaObject");
-    UsedType(iri = "https://bioschemas.org/types/Sample/0.3-DRAFT", name = "Sample");
+    UsedType(iri = "https://bioschemas.org/types/Sample/0.3-DRAFT", name = "Sample", termCode = "Sample");
     UsedType(iri = "https://schema.org/Organization", name = "Organization");
 ]
+let rptu = Organization(
+    name = "RPTU Kaiserslautern-Landau",
+    url = "https://rptu.de/"
+)
+
+let uom = Organization(
+    name = "The University of Manchester",
+    url = "https://www.manchester.ac.uk/"
+)
 
 let authors = [
-    Author(orcid = "0000-0002-5526-71389", name = "Florian Wetzels");
-    Author(orcid = "0000-0003-1945-6342", name = "Heinrich Lukas Weil");
-    Author(orcid = "0000-0002-2198-5262", name = "Kevin Schneider");
-    Author(orcid = "0000-0003-2130-0865", name = "Stuart Owen");
+    Author(orcid = "0000-0002-5526-71389", name = "Florian Wetzels", affiliation = rptu);
+    Author(orcid = "0000-0003-1945-6342", name = "Heinrich Lukas Weil", affiliation = rptu);
+    Author(orcid = "0000-0002-2198-5262", name = "Kevin Schneider", affiliation = rptu);
+    Author(orcid = "0000-0003-2130-0865", name = "Stuart Owen", affiliation = uom);
 ]
+
+let publisher = Organization(
+    name = "DataPLANT",
+    url = "https://nfdi4plants.de/"
+)
+publisher.SetProperty("http://schema.org/alternateName", "NFDI4Plants")
 
 let version = "1.0.0-draft.2"
 
@@ -39,6 +54,22 @@ let license = License(
     )
 
 let description = "An RO-Crate profile for representing ISA (Investigation, Study, and Assay) in Research Object Crates (RO-Crates)."
+
+let keywords = ResizeArray [
+    "RO-Crate"
+    "Research Object Crate"
+    "ISA"
+    "Investigation"
+    "Study"
+    "Assay"
+    "Process"
+    "Metadata Standard"
+    "Bioschemas"
+    "FAIR Data"
+    "ARC"
+    "Annotated Research Context"
+    "Data Management"
+]
 
 let specifications = ResizeArray[
     TextualResource(
@@ -85,9 +116,12 @@ let rootEntity =
         name = name,
         description = description,
         license = license,
+        authors = ResizeArray authors,
+        version = version,
+        keywords = keywords,
         usedTypes = types,
         resourceDescriptors = resourceDescriptors,
-        authors = ResizeArray authors
+        publisher = publisher
     )
 
 let profile = 
