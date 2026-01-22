@@ -21,12 +21,12 @@ let types = ResizeArray [
 ]
 let rptu = Organization(
     name = "RPTU Kaiserslautern-Landau",
-    url = "https://rptu.de/"
+    url = "https://ror.org/01qrts582"
 )
 
 let uom = Organization(
     name = "The University of Manchester",
-    url = "https://www.manchester.ac.uk/"
+    url = "https://ror.org/027m9bs27"
 )
 
 let authors = [
@@ -53,7 +53,7 @@ let license = License(
         name = "MIT License"
     )
 
-let description = "An RO-Crate profile for representing ISA (Investigation, Study, and Assay) in Research Object Crates (RO-Crates)."
+let description = "An RO-Crate profile for representing the ISA (Investigation, Study, and Assay) metadata framework in Research Object Crates (RO-Crates)."
 
 let keywords = ResizeArray [
     "RO-Crate"

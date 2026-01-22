@@ -7,17 +7,17 @@
       "name": "MIT License"
     },
     {
-      "@id": "https://rptu.de/",
+      "@id": "https://ror.org/01qrts582",
       "@type": "Organization",
       "name": "RPTU Kaiserslautern-Landau",
-      "url": "https://rptu.de/"
+      "url": "https://ror.org/01qrts582"
     },
     {
       "@id": "https://orcid.org/0000-0002-5526-71389",
       "@type": "Person",
       "name": "Florian Wetzels",
       "affiliation": {
-        "@id": "https://rptu.de/"
+        "@id": "https://ror.org/01qrts582"
       }
     },
     {
@@ -25,7 +25,7 @@
       "@type": "Person",
       "name": "Heinrich Lukas Weil",
       "affiliation": {
-        "@id": "https://rptu.de/"
+        "@id": "https://ror.org/01qrts582"
       }
     },
     {
@@ -33,21 +33,21 @@
       "@type": "Person",
       "name": "Kevin Schneider",
       "affiliation": {
-        "@id": "https://rptu.de/"
+        "@id": "https://ror.org/01qrts582"
       }
     },
     {
-      "@id": "https://www.manchester.ac.uk/",
+      "@id": "https://ror.org/027m9bs27",
       "@type": "Organization",
       "name": "The University of Manchester",
-      "url": "https://www.manchester.ac.uk/"
+      "url": "https://ror.org/027m9bs27"
     },
     {
       "@id": "https://orcid.org/0000-0003-2130-0865",
       "@type": "Person",
       "name": "Stuart Owen",
       "affiliation": {
-        "@id": "https://www.manchester.ac.uk/"
+        "@id": "https://ror.org/027m9bs27"
       }
     },
     {
@@ -285,7 +285,7 @@
           "@id": "#hasExample"
         }
       ],
-      "datePublished": "2025-11-26T15:39:18.0220345Z",
+      "datePublished": "2026-01-22T08:30:17.2768722Z",
       "publisher": {
         "@id": "https://nfdi4plants.de/"
       },
