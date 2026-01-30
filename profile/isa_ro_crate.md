@@ -289,7 +289,7 @@ General profile for key-value pairs. It is based on [schema.org/PropertyValue](h
 |@id|MUST|Text or URL||
 |@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
 |name|MUST|Text|Key name|
-|value|SHOULD|Text|Value text or number|
+|value|SHOULD|Text or Number|Value text or number|
 |propertyID|SHOULD|URL|Key ontology reference|
 |additionalType|Could|Text|Can be used to further clarify the type of this property|
 |unitCode|COULD|URL|Unit ontology reference|
@@ -306,7 +306,7 @@ Represents a process parameter. It is based on [schema.org/PropertyValue](https:
 |@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
 |name|MUST|Text|Key name|
 |additionalType|MUST|Text|MUST be `"ParameterValue"`|
-|value|SHOULD|Text|Value text or number|
+|value|SHOULD|Text or Number|Value text or number|
 |propertyID|SHOULD|URL|Key ontology reference|
 |unitCode|COULD|URL|Unit ontology reference|
 |unitText|COULD|Text|Unit name|
@@ -322,7 +322,7 @@ Represents a characteristic. It is based on [schema.org/PropertyValue](https://s
 |@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
 |name|MUST|Text|Key name|
 |additionalType|MUST|Text|MUST be `"CharacteristicValue"`|
-|value|SHOULD|Text|Value text or number|
+|value|SHOULD|Text or Number|Value text or number|
 |propertyID|SHOULD|URL|Key ontology reference|
 |unitCode|COULD|URL|Unit ontology reference|
 |unitText|COULD|Text|Unit name|
@@ -338,7 +338,7 @@ Represents a factor. It is based on [schema.org/PropertyValue](https://schema.or
 |@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
 |name|MUST|Text|Key name|
 |additionalType|MUST|Text|MUST be `"FactorValue"`|
-|value|SHOULD|Text|Value text or number|
+|value|SHOULD|Text or Number|Value text or number|
 |propertyID|SHOULD|URL|Key ontology reference|
 |unitCode|COULD|URL|Unit ontology reference|
 |unitText|COULD|Text|Unit name|
@@ -354,7 +354,7 @@ Represents a protocol component. It is based on [schema.org/PropertyValue](https
 |@type |MUST|Text|MUST be '[schema.org/PropertyValue](https://schema.org/PropertyValue)'|
 |name|MUST|Text|Key name|
 |additionalType|MUST|Text|MUST be `"Component"`|
-|value|SHOULD|Text|Value text or number|
+|value|SHOULD|Text or Number|Value text or number|
 |propertyID|SHOULD|URL|Key ontology reference|
 |valueReference|COULD|URL|Value ontology reference|
 
