@@ -1,0 +1,14 @@
+{
+    "@context": {
+        "Sample": "https://bioschemas.org/Sample",
+        "LabProtocol": "https://bioschemas.org/LabProtocol",
+        "LabProcess": "https://bioschemas.org/LabProcess",
+        "computationalTool": "https://bioschemas.org/properties/computationalTool",
+        "labEquipment": "https://bioschemas.org/properties/labEquipment",
+        "reagent": "https://bioschemas.org/properties/reagent",
+        "intendedUse": "https://bioschemas.org/properties/intendedUse",
+        "executesLabProtocol": "https://bioschemas.org/properties/executesLabProtocol",
+        "parameterValue": "https://bioschemas.org/properties/parameterValue",
+        "columnIndex": "https://w3id.org/ro/terms/arc#columnIndex"
+    }
+}
